@@ -9,7 +9,6 @@ from resources.levelresource import LevelResource
 from resources.resourcebase import ResourceBase
 from resources.resourcelist import ResourceList
 from resources.surfacelistresource import SurfaceListResource
-from resources.tilesetresource import TileSetResource
 from turrican.tilemap import Tilemap, TileSurface
 from writers.writerbase import WriterBase
 
@@ -171,4 +170,4 @@ class LevelImageWriter(WriterBase):
 
             if draw_index:
                 surface.box_fill(origin_x - 1, origin_y, len(entity.info.name) * 4 + 1, 7, self.COLOR_ORIGIN, BlendOp.ALPHA)
-                surface.text(self._font, origin_x, origin_y, entity.info.name, self.COLOR_TEXT)
+                surface.text(self._font, origin_x, origin_y, entity.info.name.upper(), self.COLOR_TEXT)

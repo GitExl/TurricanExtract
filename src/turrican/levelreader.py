@@ -2,7 +2,6 @@ from typing import List
 
 from renderlib.stream_read import StreamRead
 from resources.levelresource import Entity, LevelResource
-from resources.tilesetresource import TileSetResource
 from turrican.entityinfo import EntityInfoList
 from turrican.tilemap import Tilemap
 

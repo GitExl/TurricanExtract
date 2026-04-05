@@ -1,4 +1,3 @@
-import base64
 import json
 from math import ceil
 from pathlib import Path

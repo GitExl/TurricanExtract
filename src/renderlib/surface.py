@@ -21,7 +21,7 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-from ctypes import c_void_p, c_uint, c_char_p, c_bool, c_int, c_uint8
+from ctypes import c_void_p, c_uint, c_char_p, c_int, c_uint8
 from pathlib import Path
 
 from renderlib.dll import dll
