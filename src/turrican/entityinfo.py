@@ -62,6 +62,12 @@ class EntityInfoList:
                 merged_info_data = info_data.copy()
                 merged_info_data.update(subtype_info_data)
 
+                name = info_data.get('name', 'Unknown')
+                if 'name' in subtype_info_data:
+                    merged_info_data['name'] = '{}: {}'.format(name, subtype_info_data['name'])
+                else:
+                    merged_info_data['name'] = name
+
                 info_key = (type_key, subtype_key)
                 info[info_key] = EntityInfo(merged_info_data)
 

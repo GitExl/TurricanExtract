@@ -22,16 +22,20 @@
     },
     "subtypes": {
       "0": {
-        "name": "A"
+        "name": "A",
+        "type": "a"
       },
       "1": {
-        "name": "B"
+        "name": "B",
+        "type": "b"
       },
       "2": {
-        "name": "C"
+        "name": "C",
+        "type": "c"
       },
       "3": {
-        "name": "D"
+        "name": "D",
+        "type": "d"
       }
     }
   }

@@ -42,11 +42,13 @@
     "subtypes": {
       "0": {
         "name": "Down",
-        "gfx_index": 0
+        "gfx_index": 0,
+        "facing": "down"
       },
       "1": {
         "name": "Up",
-        "gfx_index": 2
+        "gfx_index": 2,
+        "facing": "up"
       }
     }
   },

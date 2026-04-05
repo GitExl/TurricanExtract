@@ -23,15 +23,18 @@
     "subtypes": {
       "0": {
         "name": "Floor Arc",
-        "gfx_index": 2
+        "gfx_index": 2,
+        "movement": "floor_arc"
       },
       "1": {
         "name": "Ceiling Arc",
-        "gfx_index": 4
+        "gfx_index": 4,
+        "movement": "ceiling_arc"
       },
       "2": {
         "name": "Floor",
-        "gfx_index": 0
+        "gfx_index": 0,
+        "movement": "floor"
       }
     }
   },
@@ -73,10 +76,12 @@
     },
     "subtypes": {
       "0": {
-        "name": "A"
+        "name": "A",
+        "type": "a"
       },
       "1": {
-        "name": "B"
+        "name": "B",
+        "type": "b"
       }
     }
   },
@@ -97,15 +102,16 @@
     "type": {
       "category": "decor",
       "name": "Exit Sign",
-      "gfx": "world01/exit_sign",
-      "key": "exit"
+      "gfx": "world01/exit_sign"
     },
     "subtypes": {
       "0": {
+        "key": "exit_down",
         "name": "Down",
         "gfx_index": 0
       },
       "1": {
+        "key": "exit_right",
         "name": "Right",
         "gfx_index": 1
       }

@@ -19,28 +19,36 @@
     },
     "subtypes": {
       "0": {
-        "name": "Multiple"
+        "name": "Multiple",
+        "drops": "pickup_multiple"
       },
       "1": {
-        "name": "Laser"
+        "name": "Laser",
+        "drops": "pickup_laser"
       },
       "2": {
-        "name": "Bounce"
+        "name": "Bounce",
+        "drops": "pickup_bounce"
       },
       "3": {
-        "name": "Surround"
+        "name": "Surround",
+        "drops": "pickup_surround"
       },
       "4": {
-        "name": "Smart Bomb"
+        "name": "Smart Bomb",
+        "drops": "pickup_smartbomb"
       },
       "5": {
-        "name": "Shield"
+        "name": "Shield",
+        "drops": "pickup_shield"
       },
       "6": {
-        "name": "Power Up"
+        "name": "Power Up",
+        "drops": "pickup_powerup"
       },
       "7": {
-        "name": "Power Line"
+        "name": "Power Line",
+        "drops": "pickup_powerline"
       }
     }
   },
@@ -49,54 +57,64 @@
     "type": {
       "category": "pickup",
       "name": "Pickup",
-      "gfx": "shared/powerups",
-      "key": "powerup"
+      "gfx": "shared/powerups"
     },
     "subtypes": {
       "0": {
+        "key": "pickup_multiple",
         "name": "Multiple",
         "gfx_index": 0
       },
       "1": {
+        "key": "pickup_laser",
         "name": "Laser",
         "gfx_index": 1
       },
       "2": {
+        "key": "pickup_bounce",
         "name": "Bounce",
         "gfx_index": 2
       },
       "3": {
+        "key": "pickup_surround",
         "name": "Surround",
         "gfx_index": 3
       },
       "4": {
+        "key": "pickup_smartbomb",
         "name": "Smart Bomb",
         "gfx_index": 4
       },
       "5": {
+        "key": "pickup_shield",
         "name": "Shield",
         "gfx_index": 5
       },
       "6": {
+        "key": "pickup_powerup",
         "name": "Power Up",
         "gfx_index": 6
       },
       "7": {
+        "key": "pickup_powerline",
         "name": "Power Line",
         "gfx_index": 7
       },
       "8": {
+        "key": "pickup_1up",
         "name": "1up",
         "gfx": "shared/1up",
         "gfx_index": 0,
         "offset": [0, -2]
       },
       "9": {
+        "key": "pickup_diamond",
         "category": "diamond",
         "name": "Diamond",
         "gfx": "shared/diamond"
       },
       "10": {
+        "key": "pickup_diamond_float",
         "category": "diamond",
         "name": "Diamond floating",
         "gfx": "shared/diamond"

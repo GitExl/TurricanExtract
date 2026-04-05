@@ -38,10 +38,12 @@
     },
     "subtypes": {
       "0": {
-        "name": "A"
+        "name": "A",
+        "type": "a"
       },
       "9": {
-        "name": "B"
+        "name": "B",
+        "type": "b"
       }
     }
   },
@@ -56,10 +58,12 @@
     },
     "subtypes": {
       "0": {
-        "name": "A"
+        "name": "A",
+        "type": "a"
       },
       "2": {
-        "name": "B"
+        "name": "B",
+        "type": "b"
       }
     }
   },

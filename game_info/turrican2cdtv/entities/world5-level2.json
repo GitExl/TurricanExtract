@@ -5,14 +5,16 @@
       "name": "Emitter",
       "gfx": "world05/emitter",
       "gfx_index": 2,
-      "offset": [0, 4],
-      "key": "emitter"
+      "offset": [0, 4]
     },
     "subtypes": {
-      "0": {},
+      "0": {
+        "key": "emitter"
+      },
       "1": {
         "name": "floating",
-        "offset": [0, 0]
+        "offset": [0, 0],
+        "key": "emitter_floating"
       }
     }
   },
@@ -26,12 +28,14 @@
     },
     "subtypes": {
       "0": {
-        "name": "left",
-        "gfx_index": 2
+        "name": "Left",
+        "gfx_index": 2,
+        "facing": "left"
       },
       "1": {
-        "name": "right",
-        "gfx_index": 0
+        "name": "Right",
+        "gfx_index": 0,
+        "facing": "right"
       }
     }
   },

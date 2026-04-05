@@ -42,7 +42,10 @@ class LevelImageWriter(WriterBase):
 
     def write(self, resource: ResourceBase, environment: Environment):
         level: LevelResource = cast(LevelResource, resource)
-        tileset = cast(TileSetResource, self._resources.get(TileSetResource.TYPE, level.tileset))
+        if level.tileset is None:
+            raise RuntimeError('Cannot render a level without a tileset')
+        if level.tilemap is None:
+            raise RuntimeError('Cannot render a level without a tilemap')
 
         surfaces: Dict[str, Surface] = {}
 
@@ -56,7 +59,7 @@ class LevelImageWriter(WriterBase):
         for pair in level.destructible_tiles:
             bare_tilemap.replace(pair[0], pair[1])
 
-        bare_tilemap.render(surface_tiles, tileset, TileSurface.NORMAL, tileset, level.alternate_tile_palette_y)
+        bare_tilemap.render(surface_tiles, level.tileset, TileSurface.NORMAL, level.tileset, level.alternate_tile_palette_y)
         self._paint_entities(level, surface_tiles, 'decor', False, False, False)
         surfaces['tiles'] = surface_tiles
 
@@ -65,7 +68,7 @@ class LevelImageWriter(WriterBase):
 
         # TODO: secret flagged tiles
         # if game_name == 'turrican2cdtv':
-        #     level.tilemap.render(surface_secrets, world.tileset, TileSurface.SECRET, world.tileset_alt, level.alternate_tile_palette_y)
+        #     level.tilemap.render(surface_secrets, world.level.tileset, TileSurface.SECRET, world.tileset_alt, level.alternate_tile_palette_y)
 
         self._paint_entities(level, surface_secrets, 'secret', False, False, False)
         surfaces['secrets'] = surface_secrets
@@ -77,7 +80,7 @@ class LevelImageWriter(WriterBase):
         for pair in level.destructible_tiles:
             keep.add(pair[0])
         destructible_tilemap.filter(keep)
-        destructible_tilemap.render(surface_destructible, tileset, TileSurface.NORMAL, tileset, level.alternate_tile_palette_y)
+        destructible_tilemap.render(surface_destructible, level.tileset, TileSurface.NORMAL, level.tileset, level.alternate_tile_palette_y)
         surfaces['destructible'] = surface_destructible
 
         # Pickups only. Does not include tile pickups.
@@ -95,7 +98,7 @@ class LevelImageWriter(WriterBase):
             keep.add(pair[0])
         pickup_tilemap.filter(keep)
 
-        pickup_tilemap.render(surface_entities_pickups_bonus, tileset, TileSurface.NORMAL, tileset, level.alternate_tile_palette_y)
+        pickup_tilemap.render(surface_entities_pickups_bonus, level.tileset, TileSurface.NORMAL, level.tileset, level.alternate_tile_palette_y)
         self._paint_entities(level, surface_entities_pickups_bonus, 'diamond', False, False, False)
         surfaces['pickups_bonus'] = surface_entities_pickups_bonus
 
@@ -106,10 +109,10 @@ class LevelImageWriter(WriterBase):
 
         # Debug layer with everything + debug info.
         surface_debug = Surface.empty(level.tilemap.width * Tilemap.TILE_SIZE, level.tilemap.height * Tilemap.TILE_SIZE)
-        level.tilemap.render(surface_debug, tileset, TileSurface.NORMAL, tileset, level.alternate_tile_palette_y)
+        level.tilemap.render(surface_debug, level.tileset, TileSurface.NORMAL, level.tileset, level.alternate_tile_palette_y)
 
         surface_debug_collision = Surface.empty(level.tilemap.width * Tilemap.TILE_SIZE, level.tilemap.height * Tilemap.TILE_SIZE)
-        level.tilemap.render(surface_debug_collision, tileset, TileSurface.COLLISION, tileset, level.alternate_tile_palette_y)
+        level.tilemap.render(surface_debug_collision, level.tileset, TileSurface.COLLISION, level.tileset, level.alternate_tile_palette_y)
         surface_debug.blit_blend(surface_debug_collision, 0, 0, BlendOp.ALPHA50)
 
         self._paint_entities(level, surface_debug, None, True, False, True)

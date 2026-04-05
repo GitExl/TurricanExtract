@@ -1,5 +1,6 @@
 import base64
 import json
+from math import ceil
 from pathlib import Path
 from typing import cast
 
@@ -17,43 +18,110 @@ class LevelWriter(WriterBase):
         level: LevelResource = cast(LevelResource, resource)
 
         entity_data = []
-        for entity in level.entities:
+        for index, entity in enumerate(level.entities):
+
+            # Collect property data.
+            props = []
+            for key, value in entity.info.raw.items():
+                if key in ['key', 'name', 'type', 'gfx', 'gfx_index', 'offset']:
+                    continue
+                if isinstance(value, str):
+                    props.append({
+                        'name': key,
+                        'type': 'string',
+                        'value': value,
+                    })
+                elif isinstance(value, int):
+                    props.append({
+                        'name': key,
+                        'type': 'int',
+                        'value': value,
+                    })
+
             entity_data.append({
-                'key': entity.info.key,
+                'id': index,
+                'type': entity.info.key,
                 'name': entity.info.name,
-                'category': entity.info.category,
                 'x': entity.x,
                 'y': entity.y,
+                'properties': props,
             })
 
+        # TilEd map data.
         data = {
-            'title': level.title,
+            'version': '1',
+            'orientation': 'orthogonal',
+            'renderorder': 'right-down',
+            'tilewidth': 32,
+            'tileheight': 32,
+            'width': level.tilemap.width,
+            'height': level.tilemap.height,
+
+            'properties': [
+                {
+                    'name': 'title',
+                    'type': 'string',
+                    'value': level.title,
+                },
+                {
+                    'name': 'camera_x',
+                    'type': 'int',
+                    'value': level.camera_tile_x * 32,
+                },
+                {
+                    'name': 'camera_y',
+                    'type': 'int',
+                    'value': level.camera_tile_y * 32,
+                },
+                {
+                    'name': 'start_x',
+                    'type': 'int',
+                    'value': level.camera_tile_x * 32 + level.player_x,
+                },
+                {
+                    'name': 'start_y',
+                    'type': 'int',
+                    'value': level.camera_tile_y * 32 + level.player_y,
+                },
+                {
+                    'name': 'subsong',
+                    'type': 'int',
+                    'value': level.subsong,
+                },
+            ],
+
+            'tilesets': [
+                {
+                    'columns': 10,
+                    'firstgid': 1,
+                    'image': '../textures/{}/tiles.png'.format(level.tileset.name),
+                    'imageheight': int(ceil(len(level.tileset.tiles) % 10)),
+                    'imagewidth': 320,
+                    'tilecount': len(level.tileset.tiles),
+                    'tileheight': 32,
+                    'tilewidth': 32,
+                },
+            ],
+            'nextobjectid': len(entity_data),
+
             'layers': [
                 {
-                    'type': 'tile',
+                    'name': 'Tiles',
+                    'type': 'tilelayer',
                     'width': level.tilemap.width,
                     'height': level.tilemap.height,
-                    'tiles': base64.b64encode(bytes(level.tilemap.tiles)).decode('utf8'),
-                    'tileset': level.tileset,
-                    'parallax': {
-                        'x': 0,
-                        'y': 0,
-                    }
-                }
+                    'data': list(map(lambda i: i + 1, level.tilemap.tiles)),
+                    'visible': True,
+                    'opacity': 1.0,
+                },
+                {
+                    'name': 'Objects',
+                    'type': 'objectgroup',
+                    'objects': entity_data,
+                    'visible': True,
+                    'opacity': 1.0,
+                },
             ],
-            'entities': entity_data,
-            'camera': {
-                'x': level.camera_tile_x * 32,
-                'y': level.camera_tile_y * 32,
-            },
-            'music': {
-                'source': 'world{:02}'.format(level.world_index + 1),
-                'track': level.subsong,
-            },
-            'start': {
-                'x': level.camera_tile_x * 32 + level.player_x,
-                'y': level.camera_tile_y * 32 + level.player_y,
-            }
         }
 
         filename = environment.path_output / Path('levels/world{:02}-level{:02}.json'.format(level.world_index + 1, level.level_index + 1))

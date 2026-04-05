@@ -1,6 +1,7 @@
 from typing import List, Optional, Dict
 
 from resources.resourcebase import ResourceBase
+from resources.tilesetresource import TileSetResource
 from turrican.tilemap import Tilemap
 from turrican.entityinfo import EntityInfo
 
@@ -28,7 +29,8 @@ class LevelResource(ResourceBase):
         self.level_index: int = level_index
 
         self.tilemap: Optional[Tilemap] = None
-        self.tileset: str = 'world{:02}'.format(self.world_index + 1)
+        self.tileset: Optional[TileSetResource] = None
+        # self.tileset: str = 'world{:02}'.format(self.world_index + 1)
 
         self.entities: List[Entity] = []
 

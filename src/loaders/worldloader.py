@@ -39,6 +39,7 @@ class TurricanWorldLoader(LoaderBase):
             level_offsets.append(stream.read_uint() - base_offset)
 
         # Read level headers.
+        levels = []
         levels_info = options.get('levels')
         for level_index, level_info in enumerate(levels_info):
             stream.seek(level_offsets[level_index])
@@ -77,6 +78,7 @@ class TurricanWorldLoader(LoaderBase):
                 level_reader.level.entities.append(entity)
 
             self._resources.put(level_reader.level)
+            levels.append(level_reader.level)
 
         tile_surfaces_name = 'world{:02}/tiles'.format(world_index + 1)
         tile_surfaces: Optional[SurfaceListResource] = cast(SurfaceListResource, self._resources.get('surface_list', tile_surfaces_name))
@@ -95,3 +97,8 @@ class TurricanWorldLoader(LoaderBase):
         #     palette_alt = Palette.from_stream(stream, 16, 4)
         #     mask_color = options.get('tileTransparentColor', None)
         #     tileset_alt = TileSet.from_stream(stream, offset_tile_gfx, palette_alt, mask_color)
+
+        # Assign tilesets to levels.
+        for level in levels:
+            tileset_name = 'world{:02}'.format(world_index + 1)
+            level.tileset = cast(TileSetResource, self._resources.get(TileSetResource.TYPE, tileset_name))

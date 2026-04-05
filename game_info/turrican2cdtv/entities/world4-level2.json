@@ -64,10 +64,13 @@
       "key": "emitter"
     },
     "subtypes": {
-      "0": {},
+      "0": {
+        "position": "mobile"
+      },
       "1": {
         "name": "floating",
-        "offset": [0, 0]
+        "offset": [0, 0],
+        "position": "static"
       }
     }
   },
@@ -84,7 +87,8 @@
       "0": {},
       "1": {
         "name": "Emitter",
-        "gfx_index": 2
+        "gfx_index": 2,
+        "key": "fly_walker_emitter"
       }
     }
   },

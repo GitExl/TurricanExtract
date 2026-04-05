@@ -2,6 +2,7 @@ from typing import List
 
 from renderlib.stream_read import StreamRead
 from resources.levelresource import Entity, LevelResource
+from resources.tilesetresource import TileSetResource
 from turrican.entityinfo import EntityInfoList
 from turrican.tilemap import Tilemap
 
@@ -51,7 +52,7 @@ class TurricanBinaryLevelReader(LevelReaderBase):
         # Unknown
         stream.skip(4)
 
-        # Pointer to offsets to enemy behavior code, relative to base offset.
+        # Pointer to offsets to enemy behaviour code, relative to base offset.
         stream.read_uint()
 
         self._offset_blockmap_row_pointers: int = stream.read_uint() - self._base_offset
