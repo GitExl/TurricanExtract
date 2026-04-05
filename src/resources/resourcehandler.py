@@ -36,6 +36,8 @@ class ResourceHandler:
 
     def load_resources(self):
         for loader in self._loaders:
+            print('Loading with {}'.format(loader.__class__.__name__))
+
             list_filename = self._environment.path_game / Path('resources/{}.json'.format(loader.TYPE))
             if not list_filename.exists():
                 continue
@@ -54,6 +56,8 @@ class ResourceHandler:
 
     def process_resources(self):
         for processor in self._processors:
+            print('Processing with {}'.format(processor.__class__.__name__))
+
             processor.process(self._environment, self._resources)
 
     def write_resources(self):

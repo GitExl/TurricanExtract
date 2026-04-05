@@ -1,3 +1,4 @@
+import argparse
 from pathlib import Path
 
 from environment import Environment
@@ -15,14 +16,19 @@ from writers.tilesetwriter import TileSetWriter
 
 
 def extract():
-    game_name = 'turrican1cdtv'
+    parser = argparse.ArgumentParser(
+        prog='TurricanExtract',
+        description='Extracts levels, tiles, objects, graphics and palettes from the CDTV versions of Turrican 1 and Turrican 2.',
+    )
+    parser.add_argument('game')
+    args = parser.parse_args()
 
     # TODO: w2l2_boss, all graphics should use color_zero maks, since there are white pixels where holes should be
 
     environment = Environment(
-        Path('game_data/{}'.format(game_name)),
-        Path('game_info/{}'.format(game_name)),
-        Path('output/{}'.format(game_name))
+        Path('game_info/{}'.format(args.game)),
+        Path('game_data/{}'.format(args.game)),
+        Path('output/{}'.format(args.game))
     )
 
     resource_handler = ResourceHandler(environment)
@@ -40,8 +46,11 @@ def extract():
     resource_handler.register_writer(TileSetWriter)
     resource_handler.register_writer(LevelImageWriter)
 
+    print('Extracting from {}'.format(args.game))
     resource_handler.load_resources()
     resource_handler.process_resources()
+
+    print('Writing data')
     resource_handler.write_resources()
 
 
