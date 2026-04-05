@@ -1,4 +1,4 @@
-# Turrican Extrator
+# Turrican Extract
 
 Extracts levels, tiles, objects, graphics and palettes from the CDTV versions of Turrican 1 and
 Turrican 2.
