@@ -1,0 +1,135 @@
+{
+  "4": {
+    "type": {
+      "category": "enemy",
+      "name": "Maggot",
+      "gfx": "world01/maggot",
+      "key": "maggot"
+    },
+    "subtypes": {
+      "0": {
+        "name": "Left",
+        "gfx_index": 0,
+        "facing": "left"
+      },
+      "1": {
+        "name": "Right",
+        "gfx_index": 2,
+        "facing": "right"
+      }
+    }
+  },
+
+  "5": {
+    "type": {
+      "category": "enemy",
+      "name": "Worm",
+      "gfx": "world01/worm",
+      "key": "worm"
+    },
+    "subtypes": {
+      "0": {},
+      "1": {}
+    }
+  },
+
+  "6": {
+    "type": {
+      "category": "enemy",
+      "name": "Rock",
+      "gfx": "world01/rock",
+      "key": "rock"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "7": {
+    "type": {
+      "category": "enemy",
+      "name": "Eye",
+      "gfx": "world01/spinner",
+      "offset": [0, -2],
+      "key": "spinner"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "8": {
+    "type": {
+      "category": "enemy",
+      "name": "Bat",
+      "gfx": "world01/bat",
+      "key": "bat"
+    },
+    "subtypes": {
+      "0": {
+        "name": "Down",
+        "gfx_index": 0,
+        "facing": "down"
+      },
+      "1": {
+        "name": "Up",
+        "gfx_index": 1,
+        "facing": "up"
+      }
+    }
+  },
+
+  "9": {
+    "type": {
+      "category": "enemy",
+      "name": "Floater",
+      "gfx": "world01/floater",
+      "key": "floater"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "10": {
+    "type": {
+      "category": "enemy",
+      "name": "Rocketman",
+      "gfx": "world01/rocketman",
+      "key": "rocketman"
+    },
+    "subtypes": {
+      "1": {
+        "gfx_index": 1,
+        "unknown": 0
+      },
+      "2": {
+        "unknown": 1
+      }
+    }
+  },
+
+  "11": {
+    "type": {
+      "category": "secret",
+      "name": "Powerblock",
+      "gfx": "world01/power_block",
+      "key": "power_block"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "12": {
+    "type": {
+      "category": "decor",
+      "name": "Exit",
+      "gfx": "exit_sign",
+      "key": "exit_sign"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  }
+}

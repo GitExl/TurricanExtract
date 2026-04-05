@@ -1,0 +1,24 @@
+{
+  "3": {
+    "type": {
+      "category": "enemy",
+      "name": "Walker",
+      "gfx": "world01/walker",
+      "gfx_index": 0,
+      "offset": [0, 3],
+      "key": "walker"
+    },
+    "subtypes": {
+      "0": {
+        "name": "Left",
+        "gfx_index": 0,
+        "facing": "left"
+      },
+      "1": {
+        "name": "Right",
+        "gfx_index": 4,
+        "facing": "right"
+      }
+    }
+  }
+}

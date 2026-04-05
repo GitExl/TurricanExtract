@@ -1,0 +1,128 @@
+{
+  "4": {
+    "type": {
+      "category": "enemy",
+      "name": "Dragon",
+      "gfx": "world01/dragon_head",
+      "gfx_index": 0,
+      "offset": [-8, -4],
+      "key": "dragon"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "5": {
+    "type": {
+      "category": "enemy",
+      "name": "Bomber",
+      "gfx": "world01/bomber",
+      "key": "bomber"
+    },
+    "subtypes": {
+      "0": {
+        "name": "Floor Arc",
+        "gfx_index": 2
+      },
+      "1": {
+        "name": "Ceiling Arc",
+        "gfx_index": 4
+      },
+      "2": {
+        "name": "Floor",
+        "gfx_index": 0
+      }
+    }
+  },
+
+  "6": {
+    "type": {
+      "category": "enemy",
+      "name": "Missile",
+      "gfx": "world01/falling_missile",
+      "gfx_index": 0,
+      "key": "falling_missile"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "7": {
+    "type": {
+      "category": "enemy",
+      "name": "Hive",
+      "gfx": "world01/mosquito_hive",
+      "gfx_index": 0,
+      "offset": [-8, 0],
+      "key": "mosquito_hive"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "8": {
+    "type": {
+      "category": "enemy",
+      "name": "Mosquito",
+      "gfx": "world01/mosquito",
+      "gfx_index": 1,
+      "key": "mosquito"
+    },
+    "subtypes": {
+      "0": {
+        "name": "A"
+      },
+      "1": {
+        "name": "B"
+      }
+    }
+  },
+
+  "9": {
+    "type": {
+      "name": "Leaf",
+      "gfx": "world01/leaf",
+      "gfx_index": 2,
+      "key": "leaf"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "13": {
+    "type": {
+      "category": "decor",
+      "name": "Exit Sign",
+      "gfx": "world01/exit_sign",
+      "key": "exit"
+    },
+    "subtypes": {
+      "0": {
+        "name": "Down",
+        "gfx_index": 0
+      },
+      "1": {
+        "name": "Right",
+        "gfx_index": 1
+      }
+    }
+  },
+
+  "15": {
+    "type": {
+      "category": "enemy",
+      "name": "Boss",
+      "gfx": "world01/boss1_composite",
+      "gfx_index": 0,
+      "offset": [-128, -9],
+      "key": "world01_boss1"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  }
+}

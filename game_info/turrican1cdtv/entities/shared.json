@@ -1,0 +1,115 @@
+{
+  "1": {
+    "type": {
+      "key": "flyer",
+      "category": "enemy",
+      "name": "Flyer",
+      "gfx": "flyer"
+    },
+    "subtypes": {
+      "0": {
+        "name": "Multiple",
+        "drops": "pickup_multiple"
+      },
+      "1": {
+        "name": "Size",
+        "drops": "pickup_size"
+      },
+      "2": {
+        "name": "Power",
+        "drops": "pickup_power"
+      },
+      "3": {
+        "name": "Shield",
+        "drops": "pickup_shield"
+      },
+      "4": {
+        "name": "P",
+        "drops": "pickup_p"
+      },
+      "5": {
+        "name": "G",
+        "drops": "pickup_g"
+      },
+      "6": {
+        "name": "M",
+        "drops": "pickup_m"
+      },
+      "7": {
+        "name": "L",
+        "drops": "pickup_l"
+      },
+      "8": {
+        "name": "1 up",
+        "drops": "pickup_1up"
+      },
+      "9": {
+        "name": "Diamond",
+        "drops": "pickup_diamond"
+      }
+    }
+  },
+
+  "2": {
+    "type": {
+      "category": "pickup",
+      "name": "Pickup",
+      "gfx": "powerup"
+    },
+    "subtypes": {
+      "0": {
+        "key": "pickup_multiple",
+        "name": "Multiple",
+        "gfx_index": 0
+      },
+      "1": {
+        "key": "pickup_size",
+        "name": "Size",
+        "gfx_index": 1
+      },
+      "2": {
+        "key": "pickup_power",
+        "name": "Power",
+        "gfx_index": 2
+      },
+      "3": {
+        "key": "pickup_shield",
+        "name": "Shield",
+        "gfx_index": 3
+      },
+      "4": {
+        "key": "pickup_p",
+        "name": "P",
+        "gfx_index": 4
+      },
+      "5": {
+        "key": "pickup_g",
+        "name": "G",
+        "gfx_index": 5
+      },
+      "6": {
+        "key": "pickup_m",
+        "name": "M",
+        "gfx_index": 6
+      },
+      "7": {
+        "key": "pickup_l",
+        "name": "L",
+        "gfx_index": 7
+      },
+      "8": {
+        "key": "pickup_1up",
+        "name": "1 up",
+        "gfx": "oneup",
+        "gfx_index": 0
+      },
+      "9": {
+        "key": "pickup_diamond",
+        "name": "Diamond",
+        "gfx": "diamond",
+        "gfx_index": 0,
+        "offset": [0, 1]
+      }
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "3": {
+    "type": {
+      "category": "enemy",
+      "name": "Walker",
+      "gfx": "world05/walker",
+      "gfx_index": 0,
+      "offset": [0, 3],
+      "key": "walker"
+    },
+    "subtypes": {
+      "0": {
+        "name": "Left",
+        "gfx_index": 0,
+        "facing": "left"
+      },
+      "1": {
+        "name": "Right",
+        "gfx_index": 4,
+        "facing": "right"
+      }
+    }
+  },
+
+  "4": {
+    "type": {
+      "category": "enemy",
+      "name": "Turret",
+      "gfx": "world05/turret",
+      "key": "turret"
+    },
+    "subtypes": {
+      "0": {
+        "name": "Up",
+        "offset": [4, 0],
+        "facing": "up"
+      },
+      "1": {
+        "name": "Down",
+        "gfx_index": 8,
+        "offset": [3, 0],
+        "facing": "down"
+      }
+    }
+  },
+
+  "5": {
+    "type": {
+      "category": "secret",
+      "name": "Powerblock",
+      "gfx": "world05/power_block",
+      "key": "power_block"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "6": {
+    "type": {
+      "category": "enemy",
+      "name": "Rotator",
+      "gfx": "world05/rotator",
+      "key": "rotator"
+    },
+    "subtypes": {
+      "0": {
+        "name": "Left",
+        "facing": "left"
+      },
+      "1": {
+        "name": "Right",
+        "facing": "right"
+      }
+    }
+  },
+
+  "7": {
+    "type": {
+      "category": "enemy",
+      "name": "Walkman",
+      "gfx": "world05/walkman",
+      "offset": [0, 1],
+      "key": "walkman"
+    },
+    "subtypes": {
+      "0": {
+        "name": "Left",
+        "gfx_index": 7,
+        "facing": "left"
+      },
+      "1": {
+        "name": "Right",
+        "facing": "right"
+      }
+    }
+  },
+
+  "8": {
+    "type": {
+      "category": "enemy",
+      "name": "Spikeball",
+      "gfx": "world05/spikeball",
+      "key": "spikeball"
+    },
+    "subtypes": {
+      "0": {
+        "unknown": "0"
+      },
+      "1": {
+        "name": "???",
+        "unknown": "1"
+      }
+    }
+  }
+}

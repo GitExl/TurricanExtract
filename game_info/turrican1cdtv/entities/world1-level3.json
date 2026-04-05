@@ -1,0 +1,124 @@
+{
+  "4": {
+    "type": {
+      "category": "enemy",
+      "name": "Eye",
+      "gfx": "world01/spinner",
+      "offset": [0, -2],
+      "key": "eye"
+    },
+    "subtypes": {
+      "0": {
+        "unknown": 0
+      },
+      "3": {
+        "name": "?",
+        "unknown": 3
+      }
+    }
+  },
+
+  "5": {
+    "type": {
+      "category": "enemy",
+      "name": "Floater",
+      "gfx": "world01/floater",
+      "key": "floater"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "6": {
+    "type": {
+      "category": "secret",
+      "name": "Powerblock",
+      "gfx": "world01/power_block",
+      "key": "power_block"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "7": {
+    "type": {
+      "category": "decor",
+      "name": "Platform",
+      "gfx": "world01/platform_drop",
+      "key": "platform_drop"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "8": {
+    "type": {
+      "category": "enemy",
+      "name": "Rotator",
+      "gfx": "world01/rotator",
+      "key": "rotator"
+    },
+    "subtypes": {
+      "0": {
+        "name": "Left",
+        "facing": "left"
+      },
+      "1": {
+        "name": "Right",
+        "facing": "right"
+      }
+    }
+  },
+
+  "9": {
+    "type": {
+      "category": "enemy",
+      "name": "Trackeye",
+      "gfx": "world01/track_eye",
+      "key": "track_eye"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "10": {
+    "type": {
+      "category": "enemy",
+      "name": "Wall launcher",
+      "gfx": "world01/wall_launcher",
+      "key": "wall_launcher"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "11": {
+    "type": {
+      "category": "decor",
+      "name": "Switch",
+      "gfx": "world01/exit_switch",
+      "key": "exit_switch"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "15": {
+    "type": {
+      "category": "enemy",
+      "name": "Boss",
+      "gfx": "world01/boss_spike",
+      "offset": [-96, 0],
+      "key": "boss_spike"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "world01": {
+    "65": {
+      "replace": 0,
+      "entities": [
+        {
+          "category": "decor",
+          "name": "Bridge",
+          "gfx": "world01/bridge",
+          "key": "bridge",
+          "position": [0, 13]
+        }
+      ]
+    }
+  }
+}

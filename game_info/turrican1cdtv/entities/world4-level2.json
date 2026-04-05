@@ -1,0 +1,87 @@
+{
+  "3": {
+    "type": {
+      "category": "enemy",
+      "name": "Blood",
+      "gfx": "world04/blood",
+      "gfx_index": 4,
+      "offset": [8, 0],
+      "key": "blood"
+    },
+    "subtypes": {
+      "0": {
+        "unknown": "0"
+      },
+      "1": {
+        "unknown": "1"
+      }
+    }
+  },
+
+  "4": {
+    "type": {
+      "category": "enemy",
+      "name": "Rock",
+      "gfx": "world04/boulder",
+      "key": "boulder"
+    },
+    "subtypes": {
+      "0": {
+        "name": "Left",
+        "gfx_index": 2,
+        "facing": "left"
+      },
+      "1": {
+        "name": "Right",
+        "gfx_index": 3,
+        "facing": "right"
+      }
+    }
+  },
+
+  "5": {
+    "type": {
+      "category": "secret",
+      "name": "Powerblock",
+      "gfx": "world04/power_block",
+      "key": "power_block"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "6": {
+    "type": {
+      "category": "enemy",
+      "name": "Skull",
+      "gfx": "world04/dragon_skull",
+      "gfx_index": 2,
+      "key": "dragon_skull"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "7": {
+    "type": {
+      "category": "enemy",
+      "name": "Moth",
+      "gfx": "world04/moth",
+      "key": "moth"
+    },
+    "subtypes": {
+      "0": {
+        "name": "Left",
+        "gfx_index": 0,
+        "facing": "left"
+      },
+      "1": {
+        "name": "Right",
+        "gfx_index": 6,
+        "facing": "right"
+      }
+    }
+  }
+}

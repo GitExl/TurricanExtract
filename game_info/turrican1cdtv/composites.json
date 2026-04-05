@@ -1,0 +1,62 @@
+[
+  {
+    "name": "world01/lightning_bolt",
+    "size": [48, 160],
+    "graphics": [
+      ["world01/lightning", 0, 16, 0],
+      ["world01/lightning", 1, 16, 16],
+      ["world01/lightning", 2, 16, 32],
+      ["world01/lightning", 3, 16, 48],
+      ["world01/lightning", 4, 16, 64],
+      ["world01/lightning", 0, 0, 80],
+      ["world01/lightning", 1, 0, 96],
+      ["world01/lightning", 2, 0, 112],
+      ["world01/lightning", 3, 0, 128],
+      ["world01/lightning", 4, 0, 144]
+    ]
+  },
+  {
+    "name": "world03/laser_turret",
+    "size": [48, 42],
+    "graphics": [
+      ["world03/laser_turret_barrel", 0, 0, 0],
+      ["world03/laser_turret_muzzle", 0, 8, 23]
+    ]
+  },
+  {
+    "name": "world03/flyer_bug_split",
+    "size": [384, 25],
+    "graphics": [
+      ["world03/flyer_bug", 4, 4, 0],
+      ["world03/flyer_bug", 0, 352, 0]
+    ]
+  },
+  {
+    "name": "world03/flyer_bug_wave_up",
+    "size": [384, 37],
+    "graphics": [
+      ["world03/flyer_bug", 2, 258, 12, "flip_y"],
+      ["world03/flyer_bug", 2, 218, 6, "flip_y"],
+      ["world03/flyer_bug", 2, 178, 0, "flip_y"],
+      ["world03/flyer_bug", 2, 138, 6, "flip_y"],
+      ["world03/flyer_bug", 2, 98, 12, "flip_y"]
+    ]
+  },
+  {
+    "name": "world03/flyer_bug_split_flanked",
+    "size": [384, 25],
+    "graphics": [
+      ["world03/flyer_bug", 3, 4, 0],
+      ["world03/flyer_bug", 1, 352, 0]
+    ]
+  },
+  {
+    "name": "world05/jet_composite",
+    "size": [128, 53],
+    "graphics": [
+      ["world05/jet", 0, 0, 0],
+      ["world05/jet", 1, 64, 0]
+    ]
+  }
+]
+

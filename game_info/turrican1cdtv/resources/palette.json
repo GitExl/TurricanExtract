@@ -1,0 +1,96 @@
+{
+  "LEV1": [
+    {
+      "name": "w1",
+      "length": 16,
+      "offset": 184
+    }
+  ],
+  "LEV2": [
+    {
+      "name": "w2",
+      "length": 16,
+      "offset": 130
+    }
+  ],
+  "LEV3": [
+    {
+      "name": "w3",
+      "length": 16,
+      "offset": 184
+    },
+    {
+      "name": "w3_background",
+      "length": 16,
+      "offset": 216
+    },
+    {
+      "name": "w3_player",
+      "length": 16,
+      "offset": 248
+    }
+  ],
+  "LEV4": [
+    {
+      "name": "w4",
+      "length": 16,
+      "offset": 184
+    }
+  ],
+  "LEV5": [
+    {
+      "name": "w5",
+      "offset": 130,
+      "length": 16
+    }
+  ],
+  "INTR": [
+    {
+      "name": "intro",
+      "length": 16,
+      "offset": 7032
+    },
+    {
+      "name": "intro_font",
+      "length": 16,
+      "offset": 7048
+    },
+    {
+      "name": "intro_sparkles",
+      "length": 16,
+      "offset": 7032
+    },
+    {
+      "name": "outro",
+      "length": 16,
+      "offset": 0
+    },
+    {
+      "name": "outro_font",
+      "length": 16,
+      "offset": 8
+    }
+  ],
+  "MAIN": [
+    {
+      "name": "player",
+      "length": 16,
+      "offset": 23408
+    },
+    {
+      "name": "extra",
+      "length": 16,
+      "offset": 23424
+    },
+    {
+      "name": "hud",
+      "length": 16,
+      "offset": 23488
+    },
+    {
+      "name": "wave",
+      "length": 8,
+      "offset": 23432
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "4": {
+    "type": {
+      "category": "enemy",
+      "name": "Railspike",
+      "gfx": "world03/railspike",
+      "gfx_index": 0,
+      "key": "railspike"
+    },
+    "subtypes": {
+      "0": {
+        "name": "\\",
+        "offset": [8, 0],
+        "facing": "right"
+      },
+      "1": {
+        "name": "/",
+        "facing": "left"
+      }
+    }
+  },
+
+  "5": {
+    "type": {
+      "category": "enemy",
+      "name": "Laser turret",
+      "gfx": "world03/laser_turret",
+      "offset": [0, -8],
+      "key": "laser_turret"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "6": {
+    "type": {
+      "category": "enemy",
+      "name": "Spikerod",
+      "gfx": "world03/spikerod",
+      "key": "spikerod"
+    },
+    "subtypes": {
+      "0": {
+        "name": "To left",
+        "facing": "left"
+      },
+      "1": {
+        "name": "To right",
+        "gfx_index": 8,
+        "facing": "right"
+      }
+    }
+  },
+
+  "7": {
+    "type": {
+      "category": "enemy",
+      "name": "Dropper",
+      "gfx": "world03/dropper",
+      "key": "dropper"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "8": {
+    "type": {
+      "category": "enemy",
+      "name": "Bug",
+      "gfx": "world03/flyer_bug",
+      "key": "flyer_bug"
+    },
+    "subtypes": {
+      "1": {
+        "gfx_index": 2,
+        "pattern": "wave down"
+      },
+      "2": {
+        "name": "Wave up",
+        "gfx": "world03/flyer_bug_wave_up",
+        "offset": [null, 200],
+        "pattern": "wave up"
+      },
+      "3": {
+        "name": "Split",
+        "gfx": "world03/flyer_bug_split",
+        "offset": [null, 108],
+        "hack": "flyer_bug_split",
+        "pattern": "split"
+      },
+      "4": {
+        "name": "Flanked",
+        "gfx": "world03/flyer_bug_split_flanked",
+        "offset": [null, 16],
+        "pattern": "flank"
+      }
+    }
+  },
+
+  "9": {
+    "type": {
+      "category": "enemy",
+      "name": "Small turret",
+      "gfx": "world03/small_turret",
+      "offset": [8, -6],
+      "key": "small_turret"
+    },
+    "subtypes": {
+      "0": {
+        "unknown": "0"
+      },
+      "1": {
+        "name": "Laser",
+        "gfx": null,
+        "unknown": "1"
+      }
+    }
+  },
+
+  "14": {
+    "type": {
+      "category": "decor",
+      "name": "Background"
+    },
+    "subtypes": {
+      "0": {
+        "name": "Disable",
+        "key": "background_disable"
+      },
+      "1": {
+        "name": "Enable",
+        "key": "background_enable"
+      }
+    }
+  }
+}

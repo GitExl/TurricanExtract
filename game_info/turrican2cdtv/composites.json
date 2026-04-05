@@ -1,0 +1,163 @@
+[
+  {
+    "name": "world01/waterfall_bottom_composite",
+    "size": [32, 8],
+    "graphics": [
+      ["world01/tiles", 134, 0, 0],
+      ["world01/waterfall_bottom", 0, 0, 0]
+    ]
+  },
+  {
+    "name": "world01/boss1_composite",
+    "size": [80, 105],
+    "graphics": [
+      ["world01/boss1_head", 0, 0, 0],
+      ["world01/boss1_torso", 0, 0, 30],
+      ["world01/boss1_legs", 0, 0, 52]
+    ]
+  },
+
+  {
+    "name": "world02/boss2_composite",
+    "size": [120, 441],
+    "graphics": [
+      ["world02/boss2", 0, 24, 0],
+      ["world02/boss2_arm", 0, 16, 147],
+      ["world02/boss2_middle", 0, 24, 168],
+      ["world02/boss2_arm", 0, 16, 273],
+      ["world02/boss2", 1, 24, 294],
+
+      ["world02/boss2_front", 0, -8, 168],
+      ["world02/boss2_front", 1, -8, 230],
+
+      ["world02/boss2_gun", 0, 8, 22],
+      ["world02/boss2_gun", 0, 32, 64],
+      ["world02/boss2_gun", 0, 8, 106],
+
+      ["world02/boss2_gun", 0, 8, 316],
+      ["world02/boss2_gun", 0, 32, 358],
+      ["world02/boss2_gun", 0, 8, 400]
+    ]
+  },
+  {
+    "name": "world02/spaceship",
+    "size": [128, 42],
+    "graphics": [
+      ["world02/spaceship_tiles", 0, 0, 0],
+      ["world02/spaceship_tiles", 1, 64, 8]
+    ]
+  },
+
+  {
+    "name": "world03/boss1_composite",
+    "size": [128, 62],
+    "graphics": [
+      ["world03/boss1_eye_projectile", 0, 11, 21],
+      ["world03/boss1", 3, 0, 0]
+    ]
+  },
+  {
+    "name": "world03/boss2_composite",
+    "size": [96, 148],
+    "graphics": [
+      ["world03/boss2", 1, 32, 42],
+      ["world03/boss2", 0, 30, 1],
+      ["world03/boss2", 2, 30, 106],
+      ["world03/boss2_gun", 0, 3, 1],
+      ["world03/boss2_gun", 0, 26, 43],
+      ["world03/boss2_gun", 0, 26, 85],
+      ["world03/boss2_gun", 0, 2, 127]
+    ]
+  },
+  {
+    "name": "world03/boss3_composite",
+    "size": [96, 89],
+    "graphics": [
+      ["world03/boss3_top", 0, 0, 0],
+      ["world03/boss3_bottom", 0, 0, 44]
+    ]
+  },
+
+  {
+    "name": "world04/boss2_composite",
+    "size": [96, 80],
+    "graphics": [
+      ["world04/boss2_tiles", 0, 0, 0],
+      ["world04/boss2_tiles", 1, 64, 0],
+      ["world04/boss2_tiles", 2, 16, 50]
+    ]
+  },
+  {
+    "name": "world04/boss2_composite",
+    "size": [96, 80],
+    "graphics": [
+      ["world04/boss2_tiles", 0, 0, 0],
+      ["world04/boss2_tiles", 1, 64, 0],
+      ["world04/boss2_tiles", 3, 16, 50]
+    ]
+  },
+  {
+    "name": "world04/boss2_composite",
+    "size": [96, 80],
+    "graphics": [
+      ["world04/boss2_tiles", 0, 0, 0],
+      ["world04/boss2_tiles", 1, 64, 0],
+      ["world04/boss2_tiles", 4, 16, 50]
+    ]
+  },
+  {
+    "name": "world04/boss2_composite",
+    "size": [96, 80],
+    "graphics": [
+      ["world04/boss2_tiles", 0, 0, 0],
+      ["world04/boss2_tiles", 1, 64, 0],
+      ["world04/boss2_tiles", 5, 16, 50]
+    ]
+  },
+  {
+    "name": "world04/spaceship",
+    "size": [128, 42],
+    "graphics": [
+      ["world04/spaceship_tiles", 0, 0, 0],
+      ["world04/spaceship_tiles", 1, 64, 8]
+    ]
+  },
+
+  {
+    "name": "world05/the_machine_composite",
+    "size": [160, 232],
+    "graphics": [
+      ["world05/the_machine", 2, 64, 0],
+      ["world05/the_machine", 3, 96, 0],
+      ["world05/the_machine", 4, 128, 0],
+
+      ["world05/the_machine", 10, 0, 32],
+      ["world05/the_machine", 11, 32, 32],
+      ["world05/the_machine", 12, 64, 32],
+      ["world05/the_machine", 13, 96, 32],
+      ["world05/the_machine", 14, 128, 32],
+
+      ["world05/the_machine", 20, 0, 64],
+      ["world05/the_machine", 21, 32, 64],
+      ["world05/the_machine", 22, 64, 64],
+      ["world05/the_machine", 23, 96, 64],
+      ["world05/the_machine", 24, 128, 64],
+
+      ["world05/the_machine", 32, 64, 96],
+      ["world05/the_machine", 33, 96, 96],
+      ["world05/the_machine", 34, 128, 96],
+
+      ["world05/the_machine", 42, 64, 128],
+      ["world05/the_machine", 43, 96, 128],
+      ["world05/the_machine", 44, 128, 128],
+
+      ["world05/the_machine", 53, 96, 160],
+      ["world05/the_machine", 54, 128, 160],
+
+      ["world05/the_machine", 63, 96, 192],
+      ["world05/the_machine", 64, 128, 192],
+
+      ["world05/the_machine", 39, 96, 224]
+    ]
+  }
+]

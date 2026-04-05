@@ -1,0 +1,39 @@
+{
+  "3": {
+    "type": {
+      "category": "secret",
+      "name": "Powerblock",
+      "gfx": "world05/power_block",
+      "key": "power_block"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "15": {
+    "type": {
+      "category": "enemy",
+      "name": "Boss",
+      "gfx": "world05/boss",
+      "offset": [-54, -28],
+      "key": "boss"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "16": {
+    "type": {
+      "category": "decor",
+      "name": "Jet",
+      "gfx": "world05/jet_composite",
+      "offset": [-84, 3],
+      "key": "jet"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  }
+}

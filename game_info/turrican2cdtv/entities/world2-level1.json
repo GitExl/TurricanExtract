@@ -1,0 +1,113 @@
+{
+  "4": {
+    "type": {
+      "category": "enemy",
+      "name": "Spike",
+      "gfx": "world02/spike_pillar",
+      "gfx_index": 1,
+      "offset": [0, -51],
+      "key": "spike_pillar"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "5": {
+    "type": {
+      "category": "enemy",
+      "name": "Bug",
+      "gfx": "world02/bug",
+      "gfx_index": 0,
+      "offset": [8, 0],
+      "key": "bug"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "6": {
+    "type": {
+      "category": "enemy",
+      "name": "Gripper",
+      "gfx": "world02/gripper",
+      "gfx_index": 0,
+      "key": "gripper"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "8": {
+    "type": {
+      "category": "enemy"
+    },
+    "subtypes": {
+      "0": {
+        "name": "RoboFish",
+        "gfx": "world02/robofish_small",
+        "gfx_index": 0,
+        "offset": [0, -8],
+        "key": "robofish_small"
+      },
+      "1": {
+        "name": "Jellyfish",
+        "gfx": "world02/jellyfish",
+        "gfx_index": 2,
+        "key": "jellyfish"
+      },
+      "2": {
+        "name": "Swimmer",
+        "gfx": "world02/swimmer",
+        "gfx_index": 0,
+        "key": "swimmer"
+      },
+      "3": {
+        "name": "Big RoboFish",
+        "gfx": "world02/robofish",
+        "gfx_index": 0,
+        "key": "robofish"
+      }
+    }
+  },
+
+  "12": {
+    "type": {
+      "category": "none",
+      "name": "Transition",
+      "key": "underwater_transition"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "14": {
+    "type": {
+      "category": "decor",
+      "name": "Exit sign",
+      "gfx": "world02/exit_sign",
+      "gfx_index": 0,
+      "key": "exit_sign"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "15": {
+    "type": {
+      "category": "enemy",
+      "name": "Boss",
+      "gfx": "world02/boss1",
+      "gfx_index": 0,
+      "offset": [-132, -85],
+      "key": "world02_boss1"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  }
+}

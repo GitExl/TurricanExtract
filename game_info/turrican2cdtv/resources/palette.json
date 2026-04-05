@@ -1,0 +1,142 @@
+{
+  "INTR": [
+    {
+      "name": "player_title",
+      "length": 16,
+      "offset": 1516
+    },
+    {
+      "name": "text",
+      "length": 8,
+      "offset": 1468
+    },
+    {
+      "name": "flash",
+      "length": 16,
+      "offset": 1612
+    },
+    {
+      "name": "field",
+      "length": 16,
+      "offset": 1484
+    },
+    {
+      "name": "slide",
+      "length": 16,
+      "offset": 1580
+    },
+    {
+      "name": "bw",
+      "length": 2,
+      "offset": 6673
+    },
+    {
+      "name": "black",
+      "length": 16,
+      "offset": 1548
+    },
+    {
+      "name": "glimmer",
+      "length": 16,
+      "offset": 1436
+    },
+    {
+      "name": "outro",
+      "length": 32,
+      "offset": 1644
+    },
+    {
+      "name": "logo",
+      "length": 16,
+      "offset": 1404
+    }
+  ],
+
+  "MAIN": [
+    {
+      "name": "statusbar",
+      "length": 16,
+      "offset": 22082
+    },
+    {
+      "name": "projectiles",
+      "length": 16,
+      "offset": 22018
+    },
+    {
+      "name": "lineshift",
+      "length": 4,
+      "offset": 22074
+    },
+    {
+      "name": "player_main",
+      "length": 16,
+      "offset": 22050
+    },
+    {
+      "name": "unknown_a",
+      "length": 16,
+      "offset": 21986
+    }
+  ],
+
+  "L1-1": [
+    {
+      "name": "w1",
+      "length": 16,
+      "offset": 130
+    }
+  ],
+
+  "L2-1": [
+    {
+      "name": "w2",
+      "length": 16,
+      "offset": 130
+    },
+    {
+      "name": "w2_underwater",
+      "length": 16,
+      "offset": 194
+    }
+  ],
+
+  "L3-1": [
+    {
+      "name":  "w3_b",
+      "length": 16,
+      "offset": 200
+    },
+    {
+      "name": "w3_player",
+      "length": 16,
+      "offset": 7508
+    },
+    {
+      "name": "w3",
+      "length": 16,
+      "offset": 184
+    }
+  ],
+
+  "L4-1": [
+    {
+      "name": "w4",
+      "length": 16,
+      "offset": 130
+    },
+    {
+      "name": "w4_half",
+      "length": 16,
+      "offset": 138
+    }
+  ],
+
+  "L5-1": [
+    {
+      "name": "w5",
+      "length": 16,
+      "offset": 130
+    }
+  ]
+}

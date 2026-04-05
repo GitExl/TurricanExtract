@@ -1,0 +1,158 @@
+{
+  "LEV1": [
+    {
+      "baseOffset": 113024,
+      "version": 1,
+      "index": 0,
+      "tileTransparentColor": 5,
+      "entityOffset": [0, 0],
+      "pickupTiles": [],
+      "destructibleTiles": [
+        [97, 0]
+      ],
+      "tileEntities": [
+        [101, "world01/water_splash", 0, 0, 12],
+        [102, "world01/water_splash_rocks", 0, 0, 8]
+      ],
+      "levels": [
+        {
+          "name": "world1-level1",
+          "title": "???"
+        },
+        {
+          "name": "world1-level2",
+          "title": "???"
+        },
+        {
+          "name": "world1-level3",
+          "title": "???"
+        }
+      ]
+    }
+  ],
+  "LEV2": [
+    {
+      "baseOffset": 113024,
+      "version": 1,
+      "index": 1,
+      "tileTransparentColor": null,
+      "entityOffset": [0, 32],
+      "pickupTiles": [
+        [200, 0],
+        [201, 0],
+        [202, 0],
+        [203, 0],
+        [204, 0]
+      ],
+      "destructibleTiles": [
+        [35, 0],
+        [36, 0],
+        [37, 0],
+        [38, 0],
+        [39, 0]
+      ],
+      "levels": [
+        {
+          "name": "world2-level1",
+          "title": "???"
+        },
+        {
+          "name": "world2-level2",
+          "title": "???"
+        }
+      ]
+    }
+  ],
+  "LEV3": [
+    {
+      "baseOffset": 113024,
+      "version": 1,
+      "index": 2,
+      "tileTransparentColor": 0,
+      "pickupTiles": [],
+      "destructibleTiles": [
+        [3, 1],
+        [4, 1],
+        [5, 0],
+        [6, 0],
+        [7, 0],
+        [16, 0]
+      ],
+      "levels": [
+        {
+          "name": "world3-level1",
+          "title": "???"
+        },
+        {
+          "name": "world3-level2",
+          "title": "???"
+        },
+        {
+          "name": "world3-level3",
+          "title": "???"
+        }
+      ]
+    }
+  ],
+  "LEV4": [
+    {
+      "baseOffset": 113024,
+      "version": 1,
+      "index": 3,
+      "tileTransparentColor": null,
+      "entityOffset": [0, 0],
+      "pickupTiles": [
+        [137, 0],
+        [138, 0],
+        [139, 0],
+        [140, 0],
+        [141, 0]
+      ],
+      "destructibleTiles": [
+        [2, 0],
+        [3, 0],
+        [4, 0],
+        [189, 0]
+      ],
+      "levels": [
+        {
+          "name": "world4-level1",
+          "title": "???"
+        },
+        {
+          "name": "world4-level2",
+          "title": "???"
+        },
+        {
+          "name": "world4-level3",
+          "title": "???"
+        }
+      ]
+    }
+  ],
+  "LEV5": [
+    {
+      "baseOffset": 113024,
+      "version": 1,
+      "index": 4,
+      "tileTransparentColor": null,
+      "entityOffset": [0, 0],
+      "pickupTiles": [],
+      "destructibleTiles": [
+        [4, 0],
+        [5, 0],
+        [6, 0]
+      ],
+      "levels": [
+        {
+          "name": "world5-level1",
+          "title": "???"
+        },
+        {
+          "name": "world5-level2",
+          "title": "???"
+        }
+      ]
+    }
+  ]
+}

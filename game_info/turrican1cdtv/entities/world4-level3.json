@@ -1,0 +1,65 @@
+{
+  "3": {
+    "type": {
+      "category": "enemy",
+      "name": "Blood",
+      "gfx": "world04/blood",
+      "gfx_index": 4,
+      "offset": [8, 0],
+      "key": "blood"
+    },
+    "subtypes": {
+      "0": {
+        "unknown": "0"
+      },
+      "1": {
+        "unknown": "1"
+      }
+    }
+  },
+
+  "4": {
+    "type": {
+      "category": "enemy",
+      "name": "Moth",
+      "gfx": "world04/moth",
+      "key": "moth"
+    },
+    "subtypes": {
+      "0": {
+        "name": "Left",
+        "gfx_index": 0,
+        "facing": "left"
+      },
+      "1": {
+        "name": "Right",
+        "gfx_index": 6,
+        "facing": "right"
+      }
+    }
+  },
+
+  "5": {
+    "type": {
+      "category": "decor",
+      "name": "Music",
+      "key": "music_change"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+ "15": {
+    "type": {
+      "category": "enemy",
+      "name": "Boss",
+      "gfx": "world04/boss_mouths",
+      "offset": [0, -2],
+      "key": "boss_mouths"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  }
+}

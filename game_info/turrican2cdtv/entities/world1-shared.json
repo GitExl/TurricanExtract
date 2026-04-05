@@ -1,0 +1,38 @@
+{
+  "3": {
+    "type": {
+      "category": "enemy",
+      "name": "Walker",
+      "gfx": "world01/walker",
+      "gfx_index": 0,
+      "offset": [0, 3],
+      "key": "walker"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "10": {
+    "type": {
+      "category": "secret",
+      "name": "Power Block",
+      "gfx": "world01/power_block",
+      "key": "power_block"
+    },
+    "subtypes": {
+      "0": {
+        "name": "A"
+      },
+      "1": {
+        "name": "B"
+      },
+      "2": {
+        "name": "C"
+      },
+      "3": {
+        "name": "D"
+      }
+    }
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "3": {
+    "type": {
+      "category": "enemy",
+      "name": "Walker",
+      "gfx": "world04/walker",
+      "gfx_index": 0,
+      "offset": [0, 2],
+      "key": "walker"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "4": {
+    "type": {
+      "category": "enemy",
+      "name": "Firewalker",
+      "gfx": "world04/fire",
+      "gfx_index": 4,
+      "offset": [-16, 0],
+      "key": "firewalker"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "5": {
+    "type": {
+      "category": "enemy",
+      "name": "Crusher",
+      "gfx": "world04/crusher_spikes",
+      "gfx_index": 0,
+      "offset": [-8, 0],
+      "key": "spike_crusher"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "6": {
+    "type": {
+      "category": "enemy",
+      "name": "Cog",
+      "gfx": "world04/cog",
+      "gfx_index": 0,
+      "key": "cog"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "7": {
+    "type": {
+      "category": "enemy",
+      "name": "Emitter",
+      "gfx": "world04/emitter",
+      "gfx_index": 2,
+      "offset": [0, 4],
+      "key": "emitter"
+    },
+    "subtypes": {
+      "0": {},
+      "1": {
+        "name": "floating",
+        "offset": [0, 0]
+      }
+    }
+  },
+
+  "8": {
+    "type": {
+      "category": "enemy",
+      "name": "Flywalker",
+      "gfx": "world04/fly_walker",
+      "gfx_index": 0,
+      "key": "fly_walker"
+    },
+    "subtypes": {
+      "0": {},
+      "1": {
+        "name": "Emitter",
+        "gfx_index": 2
+      }
+    }
+  },
+
+  "9": {
+    "type": {
+      "category": "secret",
+      "name": "Power Block",
+      "gfx": "world04/power_block",
+      "gfx_index": 0,
+      "key": "power_block"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "14": {
+    "type": {
+      "category": "decor",
+      "name": "Exit Right",
+      "gfx": "world04/exit_sign",
+      "gfx_index": 0,
+      "key": "exit_sign"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "15": {
+    "type": {
+      "category": "enemy",
+      "name": "Megawalker",
+      "gfx": "world04/boss2_composite",
+      "offset": [0, -80],
+      "key": "world04_boss2"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  }
+}

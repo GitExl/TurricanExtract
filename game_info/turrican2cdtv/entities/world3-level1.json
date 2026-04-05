@@ -1,0 +1,106 @@
+{
+  "4": {
+    "type": {
+      "category": "enemy",
+      "name": "Turret",
+      "gfx": "world03/turret",
+      "key": "turret"
+    },
+    "subtypes": {
+      "0": {
+        "name": "up",
+        "gfx_index": 0,
+        "offset": [0, 2]
+      },
+      "1": {
+        "name": "down",
+        "gfx_index": 3
+      }
+    }
+  },
+
+  "3": {
+    "type": {
+      "category": "enemy",
+      "name": "Egg",
+      "gfx": "world03/egg",
+      "gfx_index": 2,
+      "key": "egg"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "5": {
+    "type": {
+      "category": "enemy",
+      "name": "Roller",
+      "gfx": "world03/roller",
+      "key": "roller"
+    },
+    "subtypes": {
+      "0": {
+        "name": "Down",
+        "gfx_index": 0
+      },
+      "1": {
+        "name": "Up",
+        "gfx_index": 2
+      }
+    }
+  },
+
+  "6": {
+    "type": {
+      "category": "enemy",
+      "name": "Triangler",
+      "gfx": "world03/triangler",
+      "gfx_index": 0,
+      "key": "triangler"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "7": {
+    "type": {
+      "category": "enemy",
+      "name": "Rocket",
+      "gfx": "world03/rocket",
+      "gfx_index": 0,
+      "offset": [0, 2],
+      "key": "rocket"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "8": {
+    "type": {
+      "category": "enemy",
+      "name": "Blob",
+      "gfx": "world03/blob",
+      "gfx_index": 6,
+      "key": "blob"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "9": {
+    "type": {
+      "category": "enemy",
+      "name": "Boss",
+      "gfx": "world03/boss1_composite",
+      "offset": [8, 1],
+      "key": "world03_boss1"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "L1-1": [
+    {
+      "baseOffset": 132864,
+      "version": 2,
+      "index": 0,
+      "destructibleTiles": [
+        [71, 0],
+        [100, 0],
+        [101, 0]
+      ],
+      "tileEntities": [
+        [150, "waterfall_bottom", 0, 0],
+        [151, "waterfall_top", 0, 0],
+        [204, "waterfall_bottom", 0, 0]
+      ],
+      "levels": [
+        {
+          "name": "world1-level1",
+          "title": "The Desert"
+        },
+        {
+          "name": "world1-level2",
+          "title": "Traps",
+          "file": "L1-2"
+        }
+      ]
+    }
+  ],
+
+  "L2-1": [
+    {
+      "baseOffset": 132864,
+      "version": 2,
+      "index": 1,
+      "alternateTilePalette": 194,
+      "destructibleTiles": [
+        [120, 0],
+        [121, 0],
+        [122, 0],
+
+        [130, 0],
+        [131, 0],
+        [132, 0],
+
+        [136, 0],
+
+        [140, 0],
+        [141, 0],
+        [142, 0]
+      ],
+      "levels": [
+        {
+          "name": "world2-level1",
+          "title": "The Great Bath",
+          "alternateTilePaletteY": 1920
+        },
+        {
+          "name": "world2-level2",
+          "title": "Metal Stars",
+          "file": "L2-2"
+        }
+      ]
+    }
+  ],
+
+  "L3-1": [
+    {
+      "baseOffset": 132864,
+      "version": 2,
+      "index": 2,
+      "levels": [
+        {
+          "name": "world3-level1",
+          "title": "Lasers and Enemies"
+        },
+        {
+          "name": "world3-level2",
+          "title": "Unidirectional Fight",
+          "file": "L3-2",
+          "tilemapOffset": 19620
+        },
+        {
+          "name": "world3-level3",
+          "title": "Powerslide",
+          "file": "L3-3"
+        }
+      ]
+    }
+  ],
+
+  "L4-1": [
+    {
+      "baseOffset": 132864,
+      "version": 2,
+      "index": 3,
+      "destructibleTiles": [
+        [95, 0]
+      ],
+      "levels": [
+        {
+          "name": "world4-level1",
+          "title": "The Wall"
+        },
+        {
+          "name": "world4-level2",
+          "title": "Mr. Walker's Factory",
+          "file": "L4-2"
+        }
+      ]
+    }
+  ],
+
+  "L5-1": [
+    {
+      "baseOffset": 132864,
+      "version": 2,
+      "index": 4,
+      "destructibleTiles": [
+        [95, 0]
+      ],
+      "levels": [
+        {
+          "name": "world5-level1",
+          "title": "Alien Squeeze"
+        },
+        {
+          "name": "world5-level2",
+          "title": "The Final Challenge",
+          "file": "L5-2",
+          "extraEntities": [
+            ["lift_timed", 21, 44, { "script": { "time": -1 } }],
+            ["lift_timed", 33, 80, { "script": { "time": 7 } }],
+            ["lift_timed", 14, 100, { "script": { "time": 7 } }],
+            ["lift_timed", 21, 124, { "script": { "time": 4 } }],
+            ["lift_timed", 14, 152, { "script": { "time": 0 } }],
+            ["lift_timed", 29, 152, { "script": { "time": 5 } }],
+            ["lift_timed", 13, 204, { "script": { "time": 5 } }],
+            ["lift_timed", 21, 204, { "script": { "time": 9 } }],
+            ["lift_timed", 14, 236, { "script": { "time": 4 } }],
+            ["lift_timed", 29, 244, { "script": { "time": 7 } }],
+            ["lift_timed", 20, 264, { "script": { "time": 5 } }],
+            ["lift_timed", 31, 308, { "script": { "time": 7 } }],
+            ["lift_timed", 29, 352, { "script": { "time": 2 } }],
+            ["lift_timed", 23, 380, { "script": { "time": 2 } }],
+            ["lift_timed", 29, 428, { "script": { "time": 7 } }],
+            ["lift_timed", 13, 436, { "script": { "time": 7 } }],
+            ["lift_timed", 20, 488, { "script": { "time": 10 } }],
+            ["lift_timed", 30, 512, { "script": { "time": 5 } }],
+            ["lift_timed", 13, 548, { "script": { "time": 8 } }],
+            ["lift_timed", 17, 580, { "script": { "time": 5 } }],
+            ["lift_timed", 25, 580, { "script": { "time": 5 } }]
+          ]
+        }
+      ]
+    }
+  ]
+}

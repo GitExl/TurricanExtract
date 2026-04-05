@@ -1,0 +1,28 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# PyCharm
+.idea
+
+# Binaries
+*.dll
+*.exp
+*.lib
+*.pdb
+*.vcxproj.user
+renderlib/x64
+renderlib/x86
+renderlib/packages
+renderlib/.vs
+
+# Game data
+output/*
+game_data/*

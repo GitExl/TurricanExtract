@@ -1,0 +1,14 @@
+{
+  "15": {
+    "type": {
+      "category": "none",
+      "name": "End sequence",
+      "gfx": "world03/boss3_composite",
+      "offset": [832, -45],
+      "key": "world03_boss3"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+	"10": {
+    	"type": {
+			"category": "secret",
+  			"name": "Power Block",
+  			"gfx": "world02/power_block",
+  			"gfx_index": 0,
+      		"key": "power_block"
+    	},
+		"subtypes": {
+			"0": {}
+		}
+	}
+}

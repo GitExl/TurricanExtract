@@ -1,0 +1,169 @@
+{
+  "3": {
+    "type": {
+      "category": "secret",
+      "name": "Powerblock",
+      "gfx": "world03/power_block",
+      "gfx_index": 0,
+      "key": "power_block"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "4": {
+    "type": {
+      "category": "enemy",
+      "name": "Small turret",
+      "gfx": "world03/small_turret",
+      "key": "small_turret"
+    },
+    "subtypes": {
+      "0": {
+        "offset": [8, -6],
+        "unknown": "0"
+      },
+      "1": {
+        "name": "Laser",
+        "gfx": null,
+        "unknown": "1"
+      }
+    }
+  },
+
+  "5": {
+    "type": {
+      "category": "enemy",
+      "name": "Spikes",
+      "gfx": "world03/spikes",
+      "offset": [8, 0],
+      "key": "spikes"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "6": {
+    "type": {
+      "category": "enemy",
+      "name": "Walkman",
+      "gfx": "world03/walkman",
+      "offset": [0, 1],
+      "key": "walkman"
+    },
+    "subtypes": {
+      "0": {
+        "name": "Left",
+        "gfx_index": 7,
+        "facing": "left"
+      },
+      "1": {
+        "name": "Right",
+        "facing": "right"
+      }
+    }
+  },
+
+  "7": {
+    "type": {
+      "category": "enemy",
+      "name": "Spikeball",
+      "gfx": "world03/spikeball",
+      "key": "spikeball"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "8": {
+    "type": {
+      "category": "enemy",
+      "name": "Spider",
+      "gfx": "world03/spider",
+      "offset": [0, 1],
+      "key": "spider"
+    },
+    "subtypes": {
+      "0": {
+        "name": "Left",
+        "facing": "left"
+      },
+      "1": {
+        "name": "Right",
+        "gfx_index": 5,
+        "facing": "right"
+      }
+    }
+  },
+
+  "9": {
+    "type": {
+      "category": "enemy",
+      "name": "Block",
+      "gfx": "world03/block",
+      "key": "block"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "10": {
+    "type": {
+      "category": "enemy",
+      "name": "Bullet",
+      "gfx": "world03/bullet",
+      "key": "bullet"
+    },
+    "subtypes": {
+      "0": {
+        "name": "Up",
+        "offset": [8, -1],
+        "facing": "up"
+      },
+      "1": {
+        "name": "Down",
+        "gfx_index": 1,
+        "offset": [8, 6],
+        "facing": "down"
+      },
+      "2": {
+        "name": "Left",
+        "gfx_index": 2,
+        "offset": [8, 1],
+        "facing": "left"
+      },
+      "3": {
+        "name": "Right",
+        "gfx_index": 3,
+        "offset": [8, 1],
+        "facing": "right"
+      }
+    }
+  },
+
+  "11": {
+    "type": {
+      "category": "enemy",
+      "name": "Turret",
+      "gfx": "world03/turret",
+      "key": "turret"
+    },
+    "subtypes": {
+      "0": {
+        "name": "Up",
+        "offset": [4, 0],
+        "facing": "up"
+      },
+      "1": {
+        "name": "Down",
+        "gfx_index": 8,
+        "offset": [3, 0],
+        "facing": "down"
+      }
+    }
+  }
+}

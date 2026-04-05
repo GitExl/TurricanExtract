@@ -1,0 +1,161 @@
+{
+  "3": {
+    "type": {
+      "category": "enemy",
+      "name": "Spitter",
+      "gfx": "world05/spitter",
+      "gfx_index": 9,
+      "offset": [4, -4],
+      "key": "spitter"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "4": {
+    "type": {
+      "category": "enemy",
+      "name": "Chunk",
+      "gfx": "world05/spitter_chunk",
+      "key": "spitter_chunk"
+    },
+    "subtypes": {
+      "1": {
+        "gfx_index": 0,
+        "offset": [4, 0]
+      }
+    }
+  },
+
+  "5": {
+    "type": {
+      "category": "enemy",
+      "name": "Handeye",
+      "gfx": "world05/handeye",
+      "offset": [0, -12],
+      "key": "handeye"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "6": {
+    "type": {
+      "category": "enemy",
+      "name": "Pod",
+      "gfx": "world05/leech_pod",
+      "gfx_index": 1,
+      "offset": [0, -5],
+      "key": "leech_pod"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "7": {
+    "type": {
+      "category": "enemy",
+      "name": "Spitter",
+      "gfx": "world05/horseshoe",
+      "key": "spitter"
+    },
+    "subtypes": {
+      "0": {
+        "name": "left",
+        "gfx_index": 1,
+        "offset": [2, 0]
+      },
+      "1": {
+        "name": "right",
+        "gfx_index": 7,
+        "offset": [8, 0]
+      }
+    }
+  },
+
+  "8": {
+    "type": {
+      "category": "enemy",
+      "name": "Bouncer",
+      "gfx": "world05/bouncer",
+      "gfx_index": 0,
+      "key": "bouncer"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "9": {
+    "type": {
+      "category": "enemy",
+      "name": "Alien Gripper",
+      "gfx": "world05/alien_head",
+      "key": "alien_head"
+    },
+    "subtypes": {
+      "0": {
+        "name": "left",
+        "gfx_index": 9,
+        "offset": [-2, 6]
+      },
+      "1": {
+        "name": "right",
+        "gfx_index": 3,
+        "offset": [-6, 6]
+      }
+    }
+  },
+
+  "10": {
+    "type": {
+      "category": "secret",
+      "name": "Power Block",
+      "gfx": "world05/power_block",
+      "gfx_index": 0,
+      "key": "power_block"
+    },
+
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "12": {
+    "type": {
+      "category": "none",
+      "name": "Music Change",
+      "key": "music_transition"
+    },
+    "subtypes": {
+      "7": {
+        "name": "7"
+      },
+      "8": {
+        "name": "8"
+      },
+      "9": {
+        "name": "9"
+      },
+      "11": {
+        "name": "11"
+      }
+    }
+  },
+
+  "13": {
+    "type": {
+      "category": "decor",
+      "name": "Exit Sign",
+      "gfx": "world05/exit_sign",
+      "gfx_index": 0,
+      "key": "exit_sign"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  }
+}

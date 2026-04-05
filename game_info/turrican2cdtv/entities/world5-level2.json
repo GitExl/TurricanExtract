@@ -1,0 +1,64 @@
+{
+  "4": {
+    "type": {
+      "category": "enemy",
+      "name": "Emitter",
+      "gfx": "world05/emitter",
+      "gfx_index": 2,
+      "offset": [0, 4],
+      "key": "emitter"
+    },
+    "subtypes": {
+      "0": {},
+      "1": {
+        "name": "floating",
+        "offset": [0, 0]
+      }
+    }
+  },
+
+  "5": {
+    "type": {
+      "category": "enemy",
+      "name": "Red Gun",
+      "gfx": "world05/red_gun",
+      "key": "red_gun"
+    },
+    "subtypes": {
+      "0": {
+        "name": "left",
+        "gfx_index": 2
+      },
+      "1": {
+        "name": "right",
+        "gfx_index": 0
+      }
+    }
+  },
+
+  "14": {
+    "type": {
+      "category": "decor",
+      "name": "Lift",
+      "gfx": "world05/lift",
+      "gfx_index": 0,
+      "key": "lift_timed"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "15": {
+    "type": {
+      "category": "enemy",
+      "name": "The Machine",
+      "gfx": "world05/the_machine_composite",
+      "offset": [-72, -156],
+      "key": "world05_boss"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "3": {
+    "type": {
+      "category": "enemy",
+      "name": "Mine",
+      "key": "mine"
+    },
+    "subtypes": {
+      "0": {
+        "name": "Large",
+        "gfx": "world02/mine_large",
+        "key": "mine_large"
+      },
+      "1": {
+        "name": "Medium",
+        "gfx": "world02/mine_medium",
+        "key": "mine_medium"
+      },
+      "2": {
+        "name": "Small",
+        "gfx": "world02/mine_small",
+        "key": "mine_small"
+      }
+    }
+  },
+
+  "4": {
+    "type": {
+      "category": "decor",
+      "name": "Platform",
+      "gfx": "world02/platform",
+      "gfx_index": 0,
+      "key": "lift"
+    },
+    "subtypes": {
+      "0": {
+        "name": "Quickdrive"
+      },
+      "1": {
+        "name": "Slow"
+      }
+    }
+  },
+
+  "8": {
+    "type": {
+      "category": "enemy",
+      "name": "Ejector",
+      "gfx": "world02/ejector",
+      "gfx_index": 0,
+      "offset": [-5, 0],
+      "key": "ejector"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "9": {
+    "type": {
+      "category": "enemy",
+      "name": "Lasergun",
+      "gfx": "world02/laser_gun",
+      "offset": [-4, 0],
+      "key": "laser_gun"
+    },
+    "subtypes": {
+      "1": {
+        "gfx_index": 0
+      },
+      "2": {
+        "gfx_index": 3
+      }
+    }
+  },
+
+  "12": {
+    "type": {
+      "category": "decor",
+      "name": "Katakis",
+      "gfx": "world02/katakis_sign",
+      "gfx_index": 0,
+      "key": "katakis_sign"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  },
+
+  "14": {
+    "type": {
+      "category": "decor",
+      "name": "Exit Sign",
+      "gfx": "world02/exit_sign",
+      "gfx_index": 1,
+      "key": "exit_sign"
+    },
+    "subtypes": {
+      "1": {}
+    }
+  },
+
+  "15": {
+    "type": {
+      "category": "enemy",
+      "name": "Boss",
+      "gfx": "world02/boss2",
+      "gfx_index": 0,
+      "offset": [0, -147],
+      "key": "world02_boss2"
+    },
+    "subtypes": {
+      "0": {}
+    }
+  }
+}
