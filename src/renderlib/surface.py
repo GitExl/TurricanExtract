@@ -46,7 +46,7 @@ surfaceGetHeight.restype = c_uint
 
 surfaceWriteToPNG = dll.surfaceWriteToPNG
 surfaceWriteToPNG.argtypes = [c_void_p, c_char_p, c_uint]
-surfaceWriteToPNG.restype = c_bool
+surfaceWriteToPNG.restype = c_uint
 
 surfaceReadFromPNG = dll.surfaceReadFromPNG
 surfaceReadFromPNG.argtypes = [c_char_p]

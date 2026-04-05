@@ -94,7 +94,7 @@ class SurfaceListResource(ResourceBase):
 
         self._max_layout_width: int = max_layout_width
 
-    def get_layout(self) -> Layout:
+    def get_layout(self) -> Layout | None:
         if self.layout is None:
             self.layout = Layout(self.surfaces, self.write, self._max_layout_width)
 

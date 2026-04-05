@@ -48,6 +48,7 @@ class TileSetWriter(WriterBase):
             data.update(marge_data)
 
         filename = environment.path_output / Path('tilesets/{}.json'.format(tileset.name))
+        print(filename)
         filename.parent.mkdir(parents=True, exist_ok=True)
         with open(filename, 'w') as f:
             json.dump(data, f, indent=2)

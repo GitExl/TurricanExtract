@@ -179,17 +179,17 @@ EXPORT uint32_t surfaceGetHeight(const Surface* surface) {
 }
 
 // Write a surface to a PNG file
-EXPORT bool surfaceWriteToPNG(const Surface* surface, const char* fileName, const unsigned int compressLevel) {
+EXPORT uint32_t surfaceWriteToPNG(const Surface* surface, const char* fileName, const unsigned int compressLevel) {
   if (!surface) {
-    return false;
+    return 1;
   }
   if (compressLevel < 1 || compressLevel > 9) {
-    return false;
+    return 2;
   }
 
   PNGContext* png = pngCreate();
   if (!png) {
-    return false;
+    return 3;
   }
 
   png->width = surface->width;
@@ -201,7 +201,7 @@ EXPORT bool surfaceWriteToPNG(const Surface* surface, const char* fileName, cons
   uint32_t* imageData = calloc(1, png->width * png->height * sizeof(uint32_t));
   if (!imageData) {
     pngClose(png);
-    return false;
+    return 4;
   }
 
   int x, y;
@@ -221,21 +221,21 @@ EXPORT bool surfaceWriteToPNG(const Surface* surface, const char* fileName, cons
   if (!fp) {
     free(imageData);
     pngClose(png);
-    return false;
+    return 5;
   }
 
   if (fwrite(png->data, 1, png->dataSize, fp) == 0) {
     free(imageData);
     fclose(fp);
     pngClose(png);
-    return false;
+    return 6;
   }
 
   free(imageData);
   fclose(fp);
   pngClose(png);
 
-  return true;
+  return 0;
 }
 
 // Load a surface from a PNG file

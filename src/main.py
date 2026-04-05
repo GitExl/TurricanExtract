@@ -23,8 +23,6 @@ def extract():
     parser.add_argument('game')
     args = parser.parse_args()
 
-    # TODO: w2l2_boss, all graphics should use color_zero maks, since there are white pixels where holes should be
-
     environment = Environment(
         Path('game_info/{}'.format(args.game)),
         Path('game_data/{}'.format(args.game)),

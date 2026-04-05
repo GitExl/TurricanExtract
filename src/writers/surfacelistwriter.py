@@ -44,5 +44,6 @@ class SurfaceListWriter(WriterBase):
                 f.write(json.dumps(frame_list, indent=2))
 
         filename_texture = environment.path_output / Path('textures/{}.png'.format(surface_list.name))
+        print(filename_texture)
         filename_texture.parent.mkdir(parents=True, exist_ok=True)
         target.write_to_png(filename_texture, 1)

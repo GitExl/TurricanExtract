@@ -1,5 +1,5 @@
 from pathlib import Path
-from typing import Dict, Optional
+from typing import Dict, Optional, cast
 
 from environment import Environment
 from loaders.loaderbase import LoaderBase
@@ -44,7 +44,7 @@ class TurricanWorldLoader(LoaderBase):
             stream.seek(level_offsets[level_index])
 
             level_name = 'world{:02}-level{:02}'.format(world_index + 1, level_index + 1)
-            level = LevelResource(level_name, level_info.get('title'), world_index, level_index, level_info)
+            level = LevelResource(level_name, level_info.get('title'), world_index, level_index, level_info, options)
 
             version = options.get('version', 2)
             if version == 1:
@@ -79,7 +79,7 @@ class TurricanWorldLoader(LoaderBase):
             self._resources.put(level_reader.level)
 
         tile_surfaces_name = 'world{:02}/tiles'.format(world_index + 1)
-        tile_surfaces: Optional[SurfaceListResource] = self._resources.get('surface_list', tile_surfaces_name)
+        tile_surfaces: Optional[SurfaceListResource] = cast(SurfaceListResource, self._resources.get('surface_list', tile_surfaces_name))
         if tile_surfaces is None:
             raise Exception('Cannot find tile surfaces for world {}.'.format(world_index + 1))
         else:

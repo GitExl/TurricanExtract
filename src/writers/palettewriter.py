@@ -27,5 +27,6 @@ class PaletteWriter(WriterBase):
                 y += 8
 
         filename = environment.path_output / Path('palettes/{}.png'.format(palette.name))
+        print(filename)
         filename.parent.mkdir(parents=True, exist_ok=True)
         surface.write_to_png(filename, 1)

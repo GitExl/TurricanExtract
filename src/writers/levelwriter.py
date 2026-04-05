@@ -57,6 +57,7 @@ class LevelWriter(WriterBase):
         }
 
         filename = environment.path_output / Path('levels/world{:02}-level{:02}.json'.format(level.world_index + 1, level.level_index + 1))
+        print(filename)
         filename.parent.mkdir(parents=True, exist_ok=True)
         with open(filename, 'w') as f:
             json.dump(data, f, indent=2)

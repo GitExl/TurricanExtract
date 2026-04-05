@@ -100,20 +100,20 @@
       "2": {
         "name": "Wave up",
         "gfx": "world03/flyer_bug_wave_up",
-        "offset": [null, 200],
+        "offset": [0, 200],
         "pattern": "wave up"
       },
       "3": {
         "name": "Split",
         "gfx": "world03/flyer_bug_split",
-        "offset": [null, 108],
+        "offset": [0, 108],
         "hack": "flyer_bug_split",
         "pattern": "split"
       },
       "4": {
         "name": "Flanked",
         "gfx": "world03/flyer_bug_split_flanked",
-        "offset": [null, 16],
+        "offset": [0, 16],
         "pattern": "flank"
       }
     }

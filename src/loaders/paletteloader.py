@@ -14,7 +14,7 @@ class PaletteLoader(LoaderBase):
     def load(self, stream: StreamRead, options: Dict, environment: Environment):
         stream.seek(options.get('offset'))
 
-        name = options.get('name')
+        name = str(options.get('name'))
         if name is None:
             raise Exception('Palette has no name.')
 

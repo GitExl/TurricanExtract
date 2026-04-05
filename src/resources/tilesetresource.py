@@ -8,6 +8,7 @@ from resources.surfacelistresource import SurfaceListResource
 
 
 class CollisionType(Enum):
+    NONE = 0
     SOLID = 1
     DESTRUCTABLE = 127
     SECRET = 128
@@ -81,7 +82,7 @@ class TileSetResource(ResourceBase):
     def read_collision(self, stream: StreamRead, offset_collision: int):
         stream.seek(offset_collision)
         for tile in self.tiles:
-            tile.collision = [0] * 16
+            tile.collision = [CollisionType.NONE] * 16
             for index in range(0, 16):
                 tile.collision[index] = stream.read_ubyte()
             tile.render_collision()

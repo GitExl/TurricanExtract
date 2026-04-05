@@ -28,11 +28,12 @@ class ResourceHandler:
         self._processors.append(processor_class())
 
     def register_writer(self, writer_class: Type[WriterBase]):
-        type_list = self._writers.get('type')
+        type_list = self._writers.get(writer_class.TYPE, None)
         if type_list is None:
-            self._writers[writer_class.TYPE] = []
+            self._writers[writer_class.TYPE] = [writer_class(self._resources)]
+        else:
+            self._writers[writer_class.TYPE].append(writer_class(self._resources))
 
-        self._writers[writer_class.TYPE].append(writer_class(self._resources))
 
     def load_resources(self):
         for loader in self._loaders:

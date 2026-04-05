@@ -73,7 +73,7 @@
       "category": "enemy",
       "name": "Lightning",
       "gfx": "world01/lightning_bolt",
-      "offset": [0, null],
+      "offset": [0, 0],
       "key": "lightning_bolt"
     },
     "subtypes": {

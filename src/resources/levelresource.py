@@ -20,7 +20,7 @@ class LevelResource(ResourceBase):
 
     TYPE = 'level'
 
-    def __init__(self, name: str, title: str, world_index: int, level_index: int, data: Dict[str,any]):
+    def __init__(self, name: str, title: str, world_index: int, level_index: int, level_info: Dict[str,any], world_info: Dict[str,any]):
         super().__init__(name)
 
         self.title: str = title
@@ -40,4 +40,7 @@ class LevelResource(ResourceBase):
         self.player_x: int = 0
         self.player_y: int = 0
 
-        self.alternate_tile_palette_y: Optional[int] = data.get('alternateTilePaletteY', None)
+        self.alternate_tile_palette_y: Optional[int] = level_info.get('alternateTilePaletteY', None)
+        self.destructible_tiles: List = world_info.get('destructibleTiles', [])
+        self.pickup_tiles: List = world_info.get('pickupTiles', [])
+        self.tile_entities: List = world_info.get('tileEntities', [])

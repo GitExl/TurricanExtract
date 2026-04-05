@@ -10,10 +10,20 @@ class EntityInfo:
 
     def __init__(self, data: Dict[str, str]):
         self.category: str = data.get('category', 'none')
-        self.name: str = data.get('name')
-        self.key: str = data.get('key')
+        self.name: str = data['name']
+        self.key: str = data['key']
         self.gfx: Optional[str] = data.get('gfx', None)
-        self.gfx_index: int = data.get('gfx_index', 0)
+        self.gfx_index: int = int(data.get('gfx_index', 0))
+
+        offset = data.get('offset', None)
+        if isinstance(offset, list):
+            self.offset_x: int = offset[0]
+            self.offset_y: int = offset[1]
+        else:
+            self.offset_x: int = 0
+            self.offset_y: int = 0
+
+        self.raw: Dict[str, str] = data
 
 
 class EntityInfoList:

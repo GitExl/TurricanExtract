@@ -38,7 +38,7 @@ class LevelImageWriter(WriterBase):
         super().__init__(resources)
 
         self._font = Font.from_png('fonts/zepto.png')
-        self._compression_level = 0
+        self._compression_level = 1
 
     def write(self, resource: ResourceBase, environment: Environment):
         level: LevelResource = cast(LevelResource, resource)
@@ -50,17 +50,17 @@ class LevelImageWriter(WriterBase):
         surface_tiles = Surface.empty(level.tilemap.width * Tilemap.TILE_SIZE, level.tilemap.height * Tilemap.TILE_SIZE)
         bare_tilemap = Tilemap.from_tilemap(level.tilemap, 0, 0, level.tilemap.width, level.tilemap.height)
 
-        # TODO
-        # for pair in world.info.get('pickupTiles', []):
-        #     bare_tilemap.replace(pair[0], pair[1])
-        # for pair in world.info.get('destructibleTiles', []):
-        #     bare_tilemap.replace(pair[0], pair[1])
+        # Remove pickup and destructible tiles from the base tilemap.
+        for pair in level.pickup_tiles:
+            bare_tilemap.replace(pair[0], pair[1])
+        for pair in level.destructible_tiles:
+            bare_tilemap.replace(pair[0], pair[1])
 
         bare_tilemap.render(surface_tiles, tileset, TileSurface.NORMAL, tileset, level.alternate_tile_palette_y)
         self._paint_entities(level, surface_tiles, 'decor', False, False, False)
         surfaces['tiles'] = surface_tiles
 
-        # Secrets. Secret entities and Turrican II secret flagged subtiles.
+        # Secret entities and Turrican II secret flagged subtiles.
         surface_secrets = Surface.empty(level.tilemap.width * Tilemap.TILE_SIZE, level.tilemap.height * Tilemap.TILE_SIZE)
 
         # TODO: secret flagged tiles
@@ -73,13 +73,10 @@ class LevelImageWriter(WriterBase):
         # Destructible.
         surface_destructible = Surface.empty(level.tilemap.width * Tilemap.TILE_SIZE, level.tilemap.height * Tilemap.TILE_SIZE)
         destructible_tilemap = Tilemap.from_tilemap(level.tilemap, 0, 0, level.tilemap.width, level.tilemap.height)
-
-        # TODO
-        # keep = set()
-        # for pair in world.info.get('destructibleTiles', []):
-        #     keep.add(pair[0])
-        # destructible_tilemap.filter(keep)
-
+        keep = set()
+        for pair in level.destructible_tiles:
+            keep.add(pair[0])
+        destructible_tilemap.filter(keep)
         destructible_tilemap.render(surface_destructible, tileset, TileSurface.NORMAL, tileset, level.alternate_tile_palette_y)
         surfaces['destructible'] = surface_destructible
 
@@ -92,11 +89,11 @@ class LevelImageWriter(WriterBase):
         surface_entities_pickups_bonus = Surface.empty(level.tilemap.width * Tilemap.TILE_SIZE, level.tilemap.height * Tilemap.TILE_SIZE)
         pickup_tilemap = Tilemap.from_tilemap(level.tilemap, 0, 0, level.tilemap.width, level.tilemap.height)
 
-        # TODO
-        # keep = set()
-        # for pair in world.info.get('pickupTiles', []):
-        #     keep.add(pair[0])
-        # pickup_tilemap.filter(keep)
+        # Add pickup tiles to their own tilemap.
+        keep = set()
+        for pair in level.pickup_tiles:
+            keep.add(pair[0])
+        pickup_tilemap.filter(keep)
 
         pickup_tilemap.render(surface_entities_pickups_bonus, tileset, TileSurface.NORMAL, tileset, level.alternate_tile_palette_y)
         self._paint_entities(level, surface_entities_pickups_bonus, 'diamond', False, False, False)
@@ -121,6 +118,7 @@ class LevelImageWriter(WriterBase):
 
         for key, surface in surfaces.items():
             filename = environment.path_output / Path('levels_rendered/world{:02}-level{:02}-{}.png'.format(level.world_index + 1, level.level_index + 1, key))
+            print(filename)
             dir_tree = os.path.dirname(filename)
             os.makedirs(dir_tree, exist_ok=True)
 
@@ -149,32 +147,18 @@ class LevelImageWriter(WriterBase):
 
             origin_x = entity.x
             origin_y = entity.y
-
-            # TODO: get spawnOffset from entity position component
-            #  template.offset_* comes from where? Only in turrican 1?
-            sprite_x = origin_x
-            sprite_y = origin_y
-            # if template.offset_x is None:
-            #     sprite_x = 0
-            # else:
-            #     sprite_x = origin_x + template.offset_x
-            # if template.offset_y is None:
-            #     sprite_y = 0
-            # else:
-            #     sprite_y = origin_y + template.offset_y
-
             sprite_surface_list = [
-                (sprite_surfaces.surfaces[entity.info.gfx_index], sprite_x, sprite_y)
+                (sprite_surfaces.surfaces[entity.info.gfx_index], origin_x - entity.info.offset_x, origin_y - entity.info.offset_y)
             ]
 
-            # TODO bug split multi-surface hack
-            # if template.hack is not None:
-            #     if template.hack == 'flyer_bug_split':
-            #         sprite_surface_list = [
-            #             (sprite_surface_list[0][0], 0, sprite_surface_list[0][2] - 35),
-            #             (sprite_surface_list[0][0], 0, sprite_surface_list[0][2]),
-            #             (sprite_surface_list[0][0], 0, sprite_surface_list[0][2] + 35),
-            #         ]
+            # Bug split multi-surface hack.
+            hack = entity.info.raw.get('hack', None)
+            if hack == 'flyer_bug_split':
+                sprite_surface_list = [
+                    (sprite_surface_list[0][0], 0, sprite_surface_list[0][2] - 35),
+                    (sprite_surface_list[0][0], 0, sprite_surface_list[0][2]),
+                    (sprite_surface_list[0][0], 0, sprite_surface_list[0][2] + 35),
+                ]
 
             for sprite_surface, x, y in sprite_surface_list:
                 surface.blit_blend(sprite_surface, x, y, blend_op)

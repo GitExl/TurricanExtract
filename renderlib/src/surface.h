@@ -45,7 +45,7 @@ void surfaceCopyToBitmapScaled (const Surface* srcSurface, uint32_t* ptrBitmapBi
 EXPORT Surface* surfaceFlipY              (const Surface* srcSurface);
 EXPORT uint32_t surfaceGetWidth           (const Surface* surface);
 EXPORT uint32_t surfaceGetHeight          (const Surface* surface);
-EXPORT bool     surfaceWriteToPNG         (const Surface* surface, const char* fileName, const unsigned int compressLevel);
+EXPORT uint32_t surfaceWriteToPNG         (const Surface* surface, const char* fileName, const unsigned int compressLevel);
 EXPORT Surface* surfaceReadFromPNG        (const char* fileName);
 EXPORT Surface* surfaceCreate             (const unsigned int width, const unsigned int height);
 EXPORT void     surfaceDestroy            (Surface* surface);
