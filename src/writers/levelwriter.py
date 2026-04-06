@@ -91,7 +91,7 @@ class LevelWriter(WriterBase):
             'tilesets': [
                 {
                     'firstgid': 1,
-                    'source': '..\/tilesets\/world{:02}.json'.format(level.world_index + 1),
+                    'source': '../tilesets/world{:02}.json'.format(level.world_index + 1),
                 },
             ],
             'nextobjectid': len(entity_data),

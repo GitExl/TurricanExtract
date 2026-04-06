@@ -25,10 +25,7 @@ class SurfaceListWriter(WriterBase):
         target = Surface.empty(layout.size[0], layout.size[1])
         for index, frame in enumerate(layout.frames):
             target.blit(surface_list.surfaces[index], frame.x, frame.y)
-            frame_list.append({
-                'position': [frame.x, frame.y],
-                'size': [frame.width, frame.height],
-            })
+            frame_list.append([frame.x, frame.y, frame.width, frame.height])
 
         # Apply pre-made mask images.
         mask_path = environment.path_game / Path('masks/{}.png'.format(surface_list.name))

@@ -86,7 +86,7 @@ class TileSetWriter(WriterBase):
         data = {
             'name': tileset.name,
             'columns': 10,
-            'image': '..\/textures\/{}\/tiles.png'.format(tileset.name),
+            'image': '../textures/{}/tiles.png'.format(tileset.name),
             'imageheight': int(ceil(len(tileset.tiles) % 10)),
             'imagewidth': 320,
             'tilecount': len(tileset.tiles),
