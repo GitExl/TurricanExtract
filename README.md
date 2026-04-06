@@ -9,6 +9,8 @@ Turrican 2.
 2. [Install uv](https://docs.astral.sh/uv/getting-started/installation/).
 3. From a commandline window, run `uv run ./src/main.py turrican1cdtv` to extract data from it into `output/turrican1cdtv`.
 
+If you want to output rendered level layers, add the `--render-levels` argument.
+
 ## Compilation
 
 1. [Install Visual Studio Community](https://visualstudio.microsoft.com/vs/community/).

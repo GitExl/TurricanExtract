@@ -21,6 +21,7 @@ def extract():
         description='Extracts levels, tiles, objects, graphics and palettes from the CDTV versions of Turrican 1 and Turrican 2.',
     )
     parser.add_argument('game')
+    parser.add_argument('-r', '--render-levels', action='store_true')  # opt
     args = parser.parse_args()
 
     environment = Environment(
@@ -42,7 +43,9 @@ def extract():
     resource_handler.register_writer(PaletteWriter)
     resource_handler.register_writer(SurfaceListWriter)
     resource_handler.register_writer(TileSetWriter)
-    resource_handler.register_writer(LevelImageWriter)
+
+    if args.render_levels:
+        resource_handler.register_writer(LevelImageWriter)
 
     print('Extracting from {}'.format(args.game))
     resource_handler.load_resources()
