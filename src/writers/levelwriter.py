@@ -1,5 +1,4 @@
 import json
-from math import ceil
 from pathlib import Path
 from typing import cast
 
@@ -91,14 +90,7 @@ class LevelWriter(WriterBase):
 
             'tilesets': [
                 {
-                    'columns': 10,
-                    'firstgid': 1,
-                    'image': '../textures/{}/tiles.png'.format(level.tileset.name),
-                    'imageheight': int(ceil(len(level.tileset.tiles) % 10)),
-                    'imagewidth': 320,
-                    'tilecount': len(level.tileset.tiles),
-                    'tileheight': 32,
-                    'tilewidth': 32,
+                    'source': '../tilesets/world{:02}.json'.format(level.world_index + 1),
                 },
             ],
             'nextobjectid': len(entity_data),

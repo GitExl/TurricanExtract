@@ -1,5 +1,6 @@
-import base64
+import binascii
 import json
+from math import ceil
 from pathlib import Path
 from typing import cast
 
@@ -16,8 +17,8 @@ class TileSetWriter(WriterBase):
     def write(self, resource: ResourceBase, environment: Environment):
         tileset: TileSetResource = cast(TileSetResource, resource)
 
-        collision_data = []
-        for tile in tileset.tiles:
+        tiles_info = []
+        for tile_index, tile in enumerate(tileset.tiles):
             tile_collision = bytearray([0] * 16)
             for index, item in enumerate(tile.collision):
                 if item == CollisionType.SOLID.value:
@@ -26,18 +27,31 @@ class TileSetWriter(WriterBase):
                     tile_collision[index] = 0x02
                 elif item == CollisionType.HURT.value:
                     tile_collision[index] = 0x04
-            collision_data.append(base64.b64encode(tile_collision).decode('utf8'))
+
+            tiles_info.append({
+                'id': tile_index + 1,
+                'properties': [
+                    {
+                        'name': 'collision',
+                        'type': 'string',
+                        'value': binascii.hexlify(tile_collision).decode('ascii'),
+                    },
+                ],
+            })
 
         layout = tileset.surface_list.get_layout()
         tile_width, tile_height = layout.frame_max_size
 
         data = {
-            'tile': {
-                'width': tile_width,
-                'height': tile_height,
-            },
-            'texture': tileset.surface_list.name,
-            'collision': collision_data,
+            'columns': 10,
+            'firstgid': 1,
+            'image': '../textures/{}/tiles.png'.format(tileset.name),
+            'imageheight': int(ceil(len(tileset.tiles) % 10)),
+            'imagewidth': 320,
+            'tilecount': len(tileset.tiles),
+            'tilewidth': tile_width,
+            'tileheight': tile_height,
+            'tiles': tiles_info,
         }
 
         # Merge in tile animation data.
