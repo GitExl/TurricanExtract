@@ -1,4 +1,3 @@
-import binascii
 import json
 from math import ceil
 from pathlib import Path
@@ -19,38 +18,82 @@ class TileSetWriter(WriterBase):
 
         tiles_info = []
         for tile_index, tile in enumerate(tileset.tiles):
-            tile_collision = bytearray([0] * 16)
+            collision_objects = []
+            x = 0
+            y = 0
             for index, item in enumerate(tile.collision):
                 if item == CollisionType.SOLID.value:
-                    tile_collision[index] = 0x01
+                    collision_objects.append({
+                        'x': x,
+                        'y': y,
+                        'width': 8,
+                        'height': 8,
+                        'opacity': 1.0,
+                        'type': 'solid',
+                        'visible': True,
+                    })
                 elif item == CollisionType.DESTRUCTABLE.value:
-                    tile_collision[index] = 0x02
+                    collision_objects.append({
+                        'x': x,
+                        'y': y,
+                        'width': 8,
+                        'height': 8,
+                        'opacity': 1.0,
+                        'type': 'destructable',
+                        'visible': True,
+                    })
+                elif item == CollisionType.SECRET.value:
+                    collision_objects.append({
+                        'x': x,
+                        'y': y,
+                        'width': 8,
+                        'height': 8,
+                        'opacity': 1.0,
+                        'type': 'secret',
+                        'visible': True,
+                    })
                 elif item == CollisionType.HURT.value:
-                    tile_collision[index] = 0x04
+                    collision_objects.append({
+                        'x': x,
+                        'y': y,
+                        'width': 8,
+                        'height': 8,
+                        'opacity': 1.0,
+                        'type': 'damage',
+                        'visible': True,
+                    })
+
+                x += 8
+                if x >= 32:
+                    x = 0
+                    y += 8
 
             tiles_info.append({
-                'id': tile_index + 1,
-                'properties': [
-                    {
-                        'name': 'collision',
-                        'type': 'string',
-                        'value': binascii.hexlify(tile_collision).decode('ascii'),
-                    },
-                ],
+                'id': tile_index,
+                'objectgroup': {
+                    'type': 'objectgroup',
+                    'draworder': 'index',
+                    'name': 'collision',
+                    'objects': collision_objects,
+                    'opacity': 1.0,
+                    'visible': True
+                },
             })
 
         layout = tileset.surface_list.get_layout()
         tile_width, tile_height = layout.frame_max_size
 
         data = {
+            'name': tileset.name,
             'columns': 10,
-            'firstgid': 1,
-            'image': '../textures/{}/tiles.png'.format(tileset.name),
+            'image': '..\/textures\/{}\/tiles.png'.format(tileset.name),
             'imageheight': int(ceil(len(tileset.tiles) % 10)),
             'imagewidth': 320,
             'tilecount': len(tileset.tiles),
             'tilewidth': tile_width,
             'tileheight': tile_height,
+            'margin': 0,
+            'spacing': 0,
             'tiles': tiles_info,
         }
 
