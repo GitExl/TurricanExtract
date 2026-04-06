@@ -4,6 +4,7 @@ from pathlib import Path
 from environment import Environment
 from loaders.bitmaploader import BitmapLoader
 from loaders.paletteloader import PaletteLoader
+from loaders.tfmxmusicloader import TfmxMusicLoader
 from loaders.worldloader import TurricanWorldLoader
 from processors.compositesprocessor import CompositesProcessor
 from processors.tileentityprocessor import TileEntityProcessor
@@ -12,6 +13,7 @@ from writers.levelimagewriter import LevelImageWriter
 from writers.levelwriter import LevelWriter
 from writers.palettewriter import PaletteWriter
 from writers.surfacelistwriter import SurfaceListWriter
+from writers.tfxmusicwriter import TfmxMusicWriter
 from writers.tilesetwriter import TileSetWriter
 
 
@@ -35,6 +37,7 @@ def extract():
     resource_handler.register_loader(PaletteLoader)
     resource_handler.register_loader(BitmapLoader)
     resource_handler.register_loader(TurricanWorldLoader)
+    resource_handler.register_loader(TfmxMusicLoader)
 
     resource_handler.register_processor(CompositesProcessor)
     resource_handler.register_processor(TileEntityProcessor)
@@ -43,6 +46,7 @@ def extract():
     resource_handler.register_writer(PaletteWriter)
     resource_handler.register_writer(SurfaceListWriter)
     resource_handler.register_writer(TileSetWriter)
+    resource_handler.register_writer(TfmxMusicWriter)
 
     if args.render_levels:
         resource_handler.register_writer(LevelImageWriter)

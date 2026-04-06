@@ -1,0 +1,56 @@
+{
+  "MUS0": [
+    {
+      "name": "intro",
+      "sampleOffset": 21396,
+      "sampleSize": 50640,
+      "dataOffset": 5364,
+      "dataSize": 16032
+    }
+  ],
+  "LEV1": [
+    {
+      "name": "world01",
+      "sampleOffset": 222720,
+      "sampleSize": 24822,
+      "dataOffset": 247542,
+      "dataSize": 12252
+    }
+  ],
+  "LEV2": [
+    {
+      "name": "world02",
+      "sampleOffset": 212224,
+      "sampleSize": 37356,
+      "dataOffset": 249580,
+      "dataSize": 10224
+    }
+  ],
+  "LEV3": [
+    {
+      "name": "world03",
+      "sampleOffset": 210816,
+      "sampleSize": 35560,
+      "dataOffset": 246376,
+      "dataSize": 13356
+    }
+  ],
+  "LEV4": [
+    {
+      "name": "world04",
+      "sampleOffset": 214272,
+      "sampleSize": 38130,
+      "dataOffset": 252402,
+      "dataSize": 7304
+    }
+  ],
+  "LEV5": [
+    {
+      "name": "world05",
+      "sampleOffset": 206848,
+      "sampleSize": 42574,
+      "dataOffset": 249422,
+      "dataSize": 10296
+    }
+  ]
+}
